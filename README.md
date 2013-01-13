@@ -1,6 +1,6 @@
 #Windows Azure Web Sites Cheat Sheet
 
-Windows Azure Web Sites Cheat Sheet is a collection of lesser known uses of Windows Azure Web Sites.
+Windows Azure Web Sites Cheat Sheet is a collection of lesser known uses of [Windows Azure Web Sites](http://www.windowsazure.com/en-us/home/scenarios/web-sites/).
 
 ##Overview
 
