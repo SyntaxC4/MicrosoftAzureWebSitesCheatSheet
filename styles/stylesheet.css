@@ -29,6 +29,10 @@ hgroup h1 {
   line-height: 1.2;
 }
 
+hgroup h2 {
+  font-size: 80%;
+}
+
 li {
   line-height: 1.4 ;
 }
