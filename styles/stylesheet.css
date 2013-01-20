@@ -164,9 +164,10 @@ pre {
 }
 
 code {
-	padding: 2px;
+	background: #323232;
 	border: 1px dotted #463F3F;
 	font-style: italic;
+	padding: 2px;
 }
 
 table {
