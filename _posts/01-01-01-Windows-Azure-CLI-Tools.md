@@ -9,4 +9,5 @@ Run ```npm install azure-cli -g``` from the command-line.
 ### Setting up the CLI Tools with your Account.
 
 Run ```azure account download``` then save the resulting _publishsettings_ file.
+
 Run ```azure account import <path-to-publishsettings-file>```.
