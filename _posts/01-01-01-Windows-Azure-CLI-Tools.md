@@ -12,6 +12,6 @@ Run ```azure account download``` then save the resulting _publishsettings_ file.
 
 Run ```azure account import <path-to-publishsettings-file>```.
 
-> _publishsettings_ files can contain multiple subscriptions.
+> _publishsettings_ files may contain multiple subscriptions.
 
 If you have multiple subscriptions, run ```azure account set <subscription-name>``` to select the subscription to use.
