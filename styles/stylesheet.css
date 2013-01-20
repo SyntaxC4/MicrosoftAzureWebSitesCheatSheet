@@ -163,6 +163,11 @@ pre {
   overflow-y: hidden;
 }
 
+code {
+	padding: 5px;
+	border: 1px solid rgba(250,250,250,0.9);
+}
+
 table {
   width: 100%;
   margin: 0 0 20px 0;
