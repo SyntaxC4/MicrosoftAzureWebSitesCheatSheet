@@ -4,14 +4,14 @@ The Windows Azure CLI Tools (Cross-Platform) are available on **Linux**, **Mac**
 
 ### Installing the Windows Azure CLI Tools (Cross-Platform)
 
-Run ```npm install azure-cli -g``` from the command-line
+Run ```npm install azure-cli -g``` from the command-line.
 
 ### Setting up the CLI Tools with your Account
 
-Run ```azure account download``` then save the resulting _publishsettings_ file
+Run ```azure account download``` then save the resulting _publishsettings_ file.
 
-Run ```azure account import <path-to-publishsettings-file>```
+Run ```azure account import <path-to-publishsettings-file>```.
 
-> _publishsettings_ files can contain multiple subscriptions
+> _publishsettings_ files can contain multiple subscriptions.
 
-If you have multiple subscriptions, run ```azure account set <subscription-name>``` to select the subscription to use
+If you have multiple subscriptions, run ```azure account set <subscription-name>``` to select the subscription to use.
