@@ -165,7 +165,7 @@ pre {
 
 code {
 	padding: 2px;
-	border: 1px dotted;
+	border: 1px dotted #F0F0F0;
 	font-style: italic;
 }
 
