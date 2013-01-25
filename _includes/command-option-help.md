@@ -1,2 +1,2 @@
-<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
+<dt>-h, --help</dt>
+<dd>show usage information</dd>

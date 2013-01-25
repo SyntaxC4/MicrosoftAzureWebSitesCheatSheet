@@ -54,7 +54,7 @@
 	<tr>
 		<td>stop</td>
 		<td>
-			{% include command-option-help.mdg %}
+			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
