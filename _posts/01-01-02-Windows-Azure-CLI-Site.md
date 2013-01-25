@@ -42,24 +42,34 @@
 		<td>delete the web site [name]</td>
 	</tr>
 	<tr>
-		<td>browse</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
 		<td>start</td>
-		<td></td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
+		<td>start the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
 		<td>stop</td>
-		<td></td>
-		<td></td>
+		<td>
+			{% include command-option-help.mdg %}
+			{% include command-option-subscription.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
+		<td>stop the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
 		<td>restart</td>
-		<td></td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
+		<td>stop, then start the Internet Information Services (IIS) siteast</td>
 	</tr>
 </table>
 
