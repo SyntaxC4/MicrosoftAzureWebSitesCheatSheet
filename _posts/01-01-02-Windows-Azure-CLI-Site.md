@@ -84,7 +84,7 @@
 		<td>list</td>
 		<td>
 			{% include command-option-help.md %}
-			{% include command-option-subscription.md %}			{% include command-option-max.mdg %}
+			{% include command-option-subscription.md %}			{% include command-option-max.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
