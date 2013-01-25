@@ -11,7 +11,7 @@
 		<td>browse</td>
 		<td>
 			<dl>
-				{{ include command-option-subscription.md }}
+				{% include command-option-subscription.md %}
 			</dl>
 		</td>
 		<td>launch the website [name] in the default browser</td>
@@ -20,7 +20,7 @@
 		<td>list</td>
 		<td>
 			<dl>
-				{{ include command-option-subscription.md }}
+				{% include command-option-subscription.md %}
 			</dl>
 		</td>
 		<td>list all of the provisioned websites</td>
