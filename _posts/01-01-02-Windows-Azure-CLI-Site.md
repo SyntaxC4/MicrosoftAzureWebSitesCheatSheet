@@ -95,7 +95,7 @@
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
-			
+			{% include command-option-details.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
@@ -105,7 +105,7 @@
 		<td>redeploy</td>
 		<td>
 			{% include command-option-help.md %}
-			{% include command-option-subscription.md %}			
+			{% include command-option-subscription.md %}			{% include command-option-quiet.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
@@ -115,7 +115,9 @@
 		<td>github</td>
 		<td>
 			{% include command-option-help.md %}
-			{% include command-option-subscription.md %}			
+			{% include command-option-subscription.md %}			{% include command-option-githubusername.md %}
+			{% include command-option-githubpassword.md %}
+			{% include command-option-githubrepository.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
