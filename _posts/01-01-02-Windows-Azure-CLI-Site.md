@@ -1,4 +1,4 @@
-### Windows Azure Web Sites
+### Windows Azure Web Sites - Commands
 
 <table>
 	<caption>azure site</caption>
