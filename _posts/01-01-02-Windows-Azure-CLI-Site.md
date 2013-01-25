@@ -1,7 +1,7 @@
 ### Windows Azure Web Sites - Commands
 
 <table>
-<!--	<caption>azure site</caption>-->
+	<caption>azure site</caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
