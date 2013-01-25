@@ -82,22 +82,43 @@
 	</tr>
 	<tr>
 		<td>list</td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}			{% include command-option-max %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>show</td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>redeploy</td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}			
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>github</td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}			
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
 		<td></td>
 	</tr>
 </table>

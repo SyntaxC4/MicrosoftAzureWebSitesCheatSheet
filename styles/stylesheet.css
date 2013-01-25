@@ -177,6 +177,7 @@ table {
 }
 
 table caption {
+  background: #0F0F0F;
   text-align: left;
 }
 
