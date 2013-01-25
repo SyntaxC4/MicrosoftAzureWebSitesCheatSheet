@@ -32,8 +32,14 @@
 	</tr>
 	<tr>
 		<td>delete</td>
-		<td></td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			{% include command-option-quiet.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
+		<td>delete the web site [name]</td>
 	</tr>
 	<tr>
 		<td>browse</td>
