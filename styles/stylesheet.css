@@ -173,6 +173,7 @@ code {
 
 table {
   border: solid 1px #8F8F8F;
+  border-top: none;
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
@@ -182,6 +183,11 @@ table {
 
 table caption {
   background: #0F0F0F;
+  border: solid 1px #8F8F8F;
+  border-bottom: none;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
   padding: 6px;
   text-align: left;
 }
