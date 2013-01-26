@@ -172,6 +172,7 @@ code {
 }
 
 table {
+  border: solid 1px #8F8F8F;
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
