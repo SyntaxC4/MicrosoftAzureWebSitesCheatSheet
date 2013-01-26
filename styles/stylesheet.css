@@ -194,7 +194,9 @@ table caption {
   border-bottom-left-radius: 0px;
   color: #00FF00;
   font-family: Lucida Console;
-  padding: 6px;
+  padding-left: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: left;
 }
 
