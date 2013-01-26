@@ -1,1 +1,1 @@
-<bdi>awsm-dev$ </bdi>
+<bdi>waws-dev$ </bdi>
