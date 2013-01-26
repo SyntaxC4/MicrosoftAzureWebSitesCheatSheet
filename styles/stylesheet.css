@@ -156,9 +156,9 @@ pre {
   padding: 10px;
   font-size: 14px;
   color: #b5e853;
-  border-radius: 12px;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   text-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
@@ -172,6 +172,9 @@ code {
 }
 
 table {
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
   width: 100%;
   margin: 0 0 20px 0;
 }
