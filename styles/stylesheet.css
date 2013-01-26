@@ -177,6 +177,8 @@ table {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   width: 100%;
   margin: 0 0 20px 0;
 }
@@ -188,6 +190,8 @@ table caption {
   border-radius: 12px;
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   padding: 6px;
   text-align: left;
 }
