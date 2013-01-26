@@ -1,7 +1,7 @@
 ### Windows Azure Web Sites - Commands
 
 <table>
-	<caption>azure site</caption>
+	<caption><span>$ </span>azure site</caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -74,7 +74,7 @@
 </table>
 
 <table>
-	<caption>azure site deployment</caption>
+	<caption><span>$ </span>azure site deployment</caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
