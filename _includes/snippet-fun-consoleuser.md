@@ -1,1 +1,1 @@
-<span>awsm-dev$ </span>
+<bdi>awsm-dev$ </bdi>
