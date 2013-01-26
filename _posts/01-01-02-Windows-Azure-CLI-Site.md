@@ -1,7 +1,7 @@
 ### Windows Azure Web Sites - Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<strong>azure site<strong></caption>
+	<caption>{% include snippet-fun-consoleuser.md %}<strong>azure site</strong></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
