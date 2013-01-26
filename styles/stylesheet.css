@@ -178,6 +178,7 @@ table {
 
 table caption {
   background: #0F0F0F;
+  padding: 6px;
   text-align: left;
 }
 
