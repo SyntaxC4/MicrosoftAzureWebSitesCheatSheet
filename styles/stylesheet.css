@@ -156,9 +156,9 @@ pre {
   padding: 10px;
   font-size: 14px;
   color: #b5e853;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
   text-wrap: normal;
   overflow: auto;
   overflow-y: hidden;
@@ -178,8 +178,6 @@ table {
 
 table caption {
   background: #0F0F0F;
-  border-top-left-radius: 4;
-  border-top-right-radius: 4;
   text-align: left;
 }
 
