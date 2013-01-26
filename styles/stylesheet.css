@@ -178,6 +178,8 @@ table {
 
 table caption {
   background: #0F0F0F;
+  border-top-left-radius: 4;
+  border-top-right-radius: 4;
   text-align: left;
 }
 
