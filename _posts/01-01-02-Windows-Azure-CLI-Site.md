@@ -1,7 +1,7 @@
 ### Windows Azure Web Sites - Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site</kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -74,7 +74,7 @@
 </table>
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site deployment <dfn title="git commit SHA">&lt;commitId&gt;</dfn> <dfn title="DNS prefix for the web site in which to show deployment information">[name]</dfn></kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site deployment <dfn title="git commit SHA">&lt;commitId&gt;</dfn> <dfn title="DNS prefix for the web site in which to show deployment information">[name]</dfn></kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>

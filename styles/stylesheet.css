@@ -183,7 +183,7 @@ table {
   margin: 0 0 20px 0;
 }
 
-table caption {
+table caption.console {
   background: #0F0F0F;
   border: solid 1px #8F8F8F;
   border-bottom: none;
