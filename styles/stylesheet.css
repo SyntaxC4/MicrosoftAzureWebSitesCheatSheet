@@ -194,18 +194,30 @@ table caption {
   border-bottom-left-radius: 0px;
   color: #00FF00;
   font-family: Lucida Console;
-  padding: 10px;
+  padding: 15px;
   text-align: left;
 }
 
 th {
   text-align: left;
-  border-bottom: 1px dashed #b5e853;
+  background: #363636;
+  border-bottom: 3px  #b5e853;
   padding: 5px 10px;
 }
 
 td {
+  border-right: 1px solid #0F0F0F;
+  vertical-align: text-top;
   padding: 5px 10px;
+  font-size: 12px;
+}
+
+tr:nth-child(odd) {
+    background: #121212;
+}
+
+td:nth-child(odd) {
+
 }
 
 hr {
@@ -274,4 +286,8 @@ a {
 
 .cf {
   zoom:1;
+}
+
+kbd {
+ font-size: 16px;
 }
