@@ -273,6 +273,12 @@ a {
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
 }
 
+a[title]:focus {
+    background-color: #000000;
+    color: #F0F0F0;
+
+}
+
 /* Clearfix */
 
 .cf:before, .cf:after {

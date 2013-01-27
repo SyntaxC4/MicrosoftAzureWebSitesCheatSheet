@@ -74,7 +74,7 @@
 </table>
 
 <table>
-	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site deployment <dfn title="git commit SHA">&lt;commitId&gt;</dfn> <dfn title="DNS prefix for the web site in which to show deployment information">[name]</dfn></kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site deployment</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -91,7 +91,7 @@
 		<td>lists deployed site</td>
 	</tr>
 	<tr>
-		<td>show</td>
+		<td>show {% include command-argument-commitid.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
@@ -118,6 +118,26 @@
 			{% include command-option-subscription.md %}			{% include command-option-githubusername.md %}
 			{% include command-option-githubpassword.md %}
 			{% include command-option-githubrepository.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
+		<td></td>
+	</tr>
+</table>
+
+<table>
+	<caption></caption>
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr>
+		<td>download</td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			{% include command-option-output.md %}
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
