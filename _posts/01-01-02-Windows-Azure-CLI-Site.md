@@ -43,7 +43,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
-		<td></td>
+		<td>create a new, or associate a local directory to an existing web site</td>
 	</tr>
 	<tr>
 		<td>delete</td>
