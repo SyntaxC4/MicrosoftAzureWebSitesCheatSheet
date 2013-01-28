@@ -149,7 +149,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 #### Log Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site log</kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site log</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -174,7 +174,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 #### Repository Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site repository</kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site repository</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -206,7 +206,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 #### Location Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site location</kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site location</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -226,7 +226,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 #### Configuration Commands
 
 <table>
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site config</kbd></caption>
+	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site config</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
