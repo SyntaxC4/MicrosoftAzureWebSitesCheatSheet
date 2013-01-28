@@ -142,7 +142,7 @@ This section outlines the Windows Azure Web Sites support in the Windows Azure C
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
-		<td>set up a href="http://github.com">github service hook</a> for specified web site</td>
+		<td>setup a <a href="http://github.com">github service hook</a> for specified web site</td>
 	</tr>
 </table>
 
