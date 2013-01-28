@@ -1,6 +1,6 @@
 ### Windows Azure Web Sites - Commands
 
-
+This section outlines the Windows Azure Web Sites support in the Windows Azure Command Line (Cross-Platform) tools.
 
 #### General Commands
 
@@ -31,7 +31,18 @@
 	</tr>
 	<tr>
 		<td>create</td>
-		<td></td>
+		<td>
+			{% include command-option-help.md %}
+			{% include command-option-subscription.md %}
+			{% include command-option-location.md %}
+			{% include command-option-hostname.md %}
+			{% include command-option-git.md %}			{% include command-option-publishingusername.md %}			{% include command-option-github.md %}
+			{% include command-option-githubusername.md %}
+			{% include command-option-githubpassword.md %}
+			{% include command-option-githubrepository.md %}
+			{% include command-option-verbose.md %}
+			{% include command-option-json.md %}
+		</td>
 		<td></td>
 	</tr>
 	<tr>
