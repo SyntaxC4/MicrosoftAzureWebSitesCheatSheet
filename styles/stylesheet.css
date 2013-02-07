@@ -335,6 +335,6 @@ table td dfn[title]:hover:after {
     content: attr(title);
     left: 25%;
     padding: 5px 15px;
-    position: relative;
+    position: absolute;
     z-index: 98;
 }
