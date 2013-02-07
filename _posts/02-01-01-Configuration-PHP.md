@@ -28,6 +28,7 @@
 > Windows Azure Web Sites HTTP Handlers require Non-Thread Safe builds on PHP which can be downloaded from [windows.php.net](http://windows.php.net)
 
 <table>
+	<caption>HTTP Handler Mapping</caption>
 	<tr>
 		<th>Extension</th>
 		<th>Script Processor Path</th>

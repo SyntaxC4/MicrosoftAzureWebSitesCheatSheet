@@ -86,6 +86,6 @@
 			{% include command-option-verbose.md %}
 			{% include command-option-json.md %}
 		</td>
-		<td>stop, then start the Internet Information Services (IIS) siteast</td>
+		<td>stop, then start the Internet Information Services (IIS) site</td>
 	</tr>
 </table>
