@@ -222,6 +222,10 @@ td {
   font-size: 12px;
 }
 
+td:first-child {
+    white-space: nowrap;
+}
+
 tr:nth-child(odd) {
     background: #121212;
 }
