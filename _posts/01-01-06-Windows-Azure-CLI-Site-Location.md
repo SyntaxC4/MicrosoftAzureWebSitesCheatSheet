@@ -8,7 +8,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>list</td>
+		<td>list {% include command-argument-options.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-verbose.md %}
