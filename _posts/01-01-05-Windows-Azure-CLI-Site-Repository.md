@@ -8,7 +8,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>branch <dfn title="branch name to deploy to web site">&lt;branch&gt; {% include command-argument-name.md %} {% include command-argument-options.md %}</td>
+		<td>branch <dfn title="branch name to deploy to web site">&lt;branch&gt;</dfn> {% include command-argument-name.md %} {% include command-argument-options.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
