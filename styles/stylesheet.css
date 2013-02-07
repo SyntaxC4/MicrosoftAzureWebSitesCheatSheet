@@ -226,7 +226,7 @@ tr:nth-child(odd) {
 }
 
 td blockquote {
-    padding-left: 5px;
+    padding-left: 2px;
 }
 
 td:nth-child(odd) {
