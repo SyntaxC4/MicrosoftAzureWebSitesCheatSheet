@@ -316,7 +316,7 @@ kbd {
  font-size: 16px;
 }
 
-dfn[title]:hoverg {
+dfn[title]:hover:after {
     content: attr(title);
     padding: 4px 8px;
     color: #333;
