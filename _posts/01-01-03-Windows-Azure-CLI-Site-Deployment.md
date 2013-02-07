@@ -8,7 +8,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>list</td>
+		<td>list  {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}			{% include command-option-max.md %}
@@ -39,7 +39,7 @@
 		<td>set specified [commitid] as the active deployment</td>
 	</tr>
 	<tr>
-		<td>github</td>
+		<td>github {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}			{% include command-option-githubusername.md %}
