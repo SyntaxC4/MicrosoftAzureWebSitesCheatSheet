@@ -10,7 +10,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>browse</td>
+		<td>browse {% include command-argument-options.md %} [name]</td>
 		<td>
 			<dl>
 				{% include command-option-subscription.md %}
@@ -19,7 +19,7 @@
 		<td>launch the website [name] in the default browser</td>
 	</tr>
 	<tr>
-		<td>list</td>
+		<td>list [options]</td>
 		<td>
 			<dl>
 				{% include command-option-subscription.md %}
