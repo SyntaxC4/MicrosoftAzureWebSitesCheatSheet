@@ -189,7 +189,7 @@ table {
 }
 
 table caption {
-    border-top: solid 1px #8F8F8F;
+    border: solid 1px #8F8F8F;
     border-bottom: none;
     border-radius: 12px;
     -moz-border-radius: 12px;
