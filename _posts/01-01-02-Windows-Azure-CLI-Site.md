@@ -10,7 +10,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>browse {% include command-argument-options.md %} [name]</td>
+		<td>browse {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl>
 				{% include command-option-subscription.md %}
@@ -19,7 +19,7 @@
 		<td>launch the website [name] in the default browser</td>
 	</tr>
 	<tr>
-		<td>list [options]</td>
+		<td>list {% include command-argument-options.md %}</td>
 		<td>
 			<dl>
 				{% include command-option-subscription.md %}
@@ -28,7 +28,7 @@
 		<td>list all of the provisioned websites</td>
 	</tr>
 	<tr>
-		<td>create</td>
+		<td>create {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
@@ -44,7 +44,7 @@
 		<td>create a new, or associate a local directory to an existing web site</td>
 	</tr>
 	<tr>
-		<td>delete</td>
+		<td>delete {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl>
 				{% include command-option-help.md %}
