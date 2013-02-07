@@ -79,7 +79,7 @@
 		<td>stop the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
-		<td>restart</td>
+		<td>restart {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
