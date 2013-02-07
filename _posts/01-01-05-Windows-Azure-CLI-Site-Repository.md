@@ -1,7 +1,7 @@
 #### Repository Commands
 
-<table>
-	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site repository</kbd></caption>
+<table class="cli">
+	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site repository</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>

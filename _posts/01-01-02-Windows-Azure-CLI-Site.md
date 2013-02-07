@@ -2,8 +2,8 @@
 
 #### General Commands
 
-<table>
-	<caption class="console">{% include snippet-fun-consoleuser.md %}<kbd>azure site</kbd></caption>
+<table class="cli">
+	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site</kbd></caption>
 	<tr>
 		<th>command</th>
 		<th>options</th>
@@ -57,7 +57,7 @@
 		<td>delete the web site [name]</td>
 	</tr>
 	<tr>
-		<td>start</td>
+		<td>start {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl>
 				{% include command-option-help.md %}
@@ -69,7 +69,7 @@
 		<td>start the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
-		<td>stop</td>
+		<td>stop {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
