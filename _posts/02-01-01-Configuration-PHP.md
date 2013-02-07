@@ -1,4 +1,6 @@
-### PHP Site Configuration
+## Language/Framework Specific Site Configuration
+
+###PHP
 
 #### PHP Version
 
@@ -20,6 +22,29 @@
 		<td><a href="http://go.microsoft.com/fwlink/?LinkId=259761" target="_blank" alt="download WinCache 1.3">1.3</a></td>
 	</tr>
 </table>
+
+##### Bring your own Runtime
+
+> Windows Azure Web Sites HTTP Handlers require Non-Thread Safe builds on PHP which can be downloaded from [windows.php.net](http://windows.php.net)
+
+<table>
+	<tr>
+		<th>Extension</th>
+		<th>Script Processor Path</th>
+		<th>Additional Arguments (Optional)</th>
+	</tr>
+	<tr>
+		<td><dfn title="All PHP files">*.php</dfn></td>
+		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><dfn title="All files">*</dfn></td>
+		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
+		<td></td>
+	</tr>
+</table>
+
 
 ####AppSettings
 
@@ -53,26 +78,3 @@
 </table>
 
 > Currently AppSettings can only able extensions available in wwwroot.
-
-
-#### Bring your own Runtime
-
-> Windows Azure Web Sites HTTP Handlers require Non-Thread Safe builds on PHP which can be downloaded from [windows.php.net](http://windows.php.net)
-
-<table>
-	<tr>
-		<th>Extension</th>
-		<th>Script Processor Path</th>
-		<th>Additional Arguments (Optional)</th>
-	</tr>
-	<tr>
-		<td><dfn title="All PHP files">*.php</dfn></td>
-		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td><dfn title="All files">*</dfn></td>
-		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
-		<td></td>
-	</tr>
-</table>
