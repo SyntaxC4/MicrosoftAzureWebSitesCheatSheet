@@ -225,6 +225,10 @@ tr:nth-child(odd) {
     background: #121212;
 }
 
+td blockquote {
+    padding-left: 5px;
+}
+
 td:nth-child(odd) {
 
 }
