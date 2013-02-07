@@ -8,7 +8,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>download</td>
+		<td>download {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			{% include command-option-help.md %}
 			{% include command-option-subscription.md %}
