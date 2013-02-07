@@ -326,7 +326,7 @@ kbd {
  font-size: 16px;
 }
 
-dfn[title]:hover:after {
+table td dfn[title]:hover:after {
     content: attr(title);
     padding: 4px 8px;
     color: #333;
