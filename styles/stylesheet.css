@@ -320,7 +320,7 @@ dfn[title]:hover:after {
     content: attr(title);
     padding: 4px 8px;
     color: #333;
-    position: absolute;
+    position: relative;
     left: 0;
     top: 100%;
     white-space: nowrap;
