@@ -315,7 +315,7 @@ a[title]:focus {
 kbd {
  font-size: 16px;
 }
-g
+
 dfn[title]:hover:after {
     content: attr(title);
     padding: 4px 8px;
