@@ -336,7 +336,7 @@ table td dfn[title]:hover:after {
     border-radius: 5px;
     bottom: 25px;
     color: #fff;
-    content: attr(title);
+    content: attr(data-title);
     padding: 5px 15px;
     position: absolute;
     z-index: 98;
