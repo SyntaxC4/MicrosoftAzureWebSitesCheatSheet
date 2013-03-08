@@ -330,13 +330,14 @@ dfn {
     position: relative;	
 }
 
-table td dfn[title]:hover:after {
+dfn[title]:hover:after {
     background: #333;
     background: rgba(0,0,0,.8);
     border-radius: 5px;
     bottom: 25px;
     color: #fff;
     content: attr(data-title);
+    left: 15%;
     padding: 5px 15px;
     position: absolute;
     z-index: 98;
