@@ -326,6 +326,10 @@ kbd {
  font-size: 16px;
 }
 
+dfn {
+    position: relative;	
+}
+
 table td dfn[title]:hover:after {
     background: #333;
     background: rgba(0,0,0,.8);
