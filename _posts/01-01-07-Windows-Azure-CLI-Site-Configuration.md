@@ -1,4 +1,4 @@
-c#### Configuration Commands
+#### Configuration Commands
 
 <table class="cli">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site config</kbd></caption>
