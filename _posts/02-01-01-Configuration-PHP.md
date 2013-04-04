@@ -14,7 +14,7 @@
 	<tr>
 		<td>5.3</td>
 		<td><a href="http://windows.php.net/downloads/releases/archives/php-5.3.13-nts-Win32-VC9-x86.zip" target="_blank" alt="download PHP 5.3.13">5.3.13</a></td>
-		<td><a href="http://go.microsoft.com/?linkid=9697971" target="_blank" alt="download WinCache 1.1">1.1</a></td>
+		<td><a href="http://go.microsoft.com/fwlink/?LinkId=259761" target="_blank" alt="download WinCache 1.3">1.3</a></td>
 	</tr>
 	<tr>
 		<td>5.4</td>
