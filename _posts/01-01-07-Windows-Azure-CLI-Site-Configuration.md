@@ -1,6 +1,10 @@
-#### Configuration Commands
+---
+category: cross-platform
+---
 
-<table class="cli">
+### Configuration Commands
+
+<table class="table table-striped cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site config</kbd></caption>
 	<tr>
 		<th>command</th>

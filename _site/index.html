@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="description" content="A quick reference guide to Windows Azure Web Sites features, functionality and tooling.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- force most recent IE rendering engine -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/site.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <title>Windows Azure Web Site Cheat Sheet</title>
+  </head>
+
+<body data-spy="scroll" data-target="#navbar">
+<a name="top"></a>
+	
+	<div id="navbar" class="navbar navbar-fixed-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">WAWS Cheat Sheet</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Welcome</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language Guide <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#asp">ASP</a></li>
+                <li><a href="#aspnet">ASP.NET</a></li>
+                <li><a href="#nodejs">NODE.JS</a></li>
+                <li><a href="#php">PHP</a></li>
+                <li><a href="#python">PYTHON</a></li>
+              </ul>
+            </li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">CLI Reference <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#cross-platform">Cross Platform</a></li>
+					<li><a href="#powershell">PowerShell</a></li>
+				</ul>
+			</li>
+			<li><a href="#samples">Samples</a></li>
+			<li><a href="#additional-references">Additional References</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<div class="container">
+
+		
+
+<section id="home">
+	<p>#Welcome</p>
+
+<p>Welcome to <a href='http://www.windowsazure.com/en-us/home/scenarios/web-sites/'>Windows Azure Web Sites</a> Cheat Sheet &#8212; a quick reference for working with Windows Azure Web Sites. If you are looking for <a href='http://www.windowsazure.com/en-us/develop/overview/'>tutorials on Windows Azure Web Sites</a> view the <a href='http://www.windowsazure.com'>Windows Azure</a> homepage</p>
+</section>
+
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(Cross-Platform)</small></h1>
+<div class='alert alert-info'>
+<strong>Prerequisites</strong>
+<p>
+<ul>
+	<li>Node.js <a href='http://nodejs.org/download/'>[Download]</a></li>
+</ul>
+</p>
+</div><div class='panel panel-info hidden-print hidden-sm'>
+	<div class='panel-heading'>Install Options</div>
+	<a class='btn btn-success btn-small btn-block' href='http://go.microsoft.com/?linkid=9828653&amp;clcid=0x409'><small>Windows</small></a>
+	<a class='btn btn-success btn-small btn-block' href='http://go.microsoft.com/fwlink/?linkid=253471&amp;clcid=0x409'><small>Mac</small></a>
+</div>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h3 id='general_commands'>General Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>browse <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>launch the website [name] in the default browser</td>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>list all of the provisioned websites</td>
+	</tr>
+	<tr>
+		<td>create <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-l, --location &lt;location&gt;</dt>
+<dd>the geographic region to create the website</dd>
+				<dt>--hostname</dt>
+<dd>custom hostname to associate to the web site</dd>
+				<dt>--git</dt>
+<dd>configure git on web site and local folder</dd>			<dt>-pu, --publishingUsername</dt>
+<dd>the publishing username for git</dd>			<dt>--github</dt>
+<dd>configure github on web site and local folder</dd>
+				<dt>--githubusername &lt;username&gt;</dt>
+<dd>the github username</dd>
+				<dt>--githubpassword &lt;password&gt;</dt>
+<dd>the github password</dd>
+				<dt>--githubrepository</dt>
+<dd>the full name (eg. username/repository) of the github repository</dd>
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+			</dl>
+		</td>
+		<td>create a new, or associate a local directory to an existing web site</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+			</dl>
+		</td>
+		<td>delete the web site [name]</td>
+	</tr>
+	<tr>
+		<td>start <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+			</dl>
+		</td>
+		<td>start the Internet Information Services (IIS) site</td>
+	</tr>
+	<tr>
+		<td>stop <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+			</dl>
+		</td>
+		<td>stop the Internet Information Services (IIS) site</td>
+	</tr>
+	<tr>
+		<td>restart <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+			</dl>
+		</td>
+		<td>stop, then start the Internet Information Services (IIS) site</td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h3 id='deployment_commands'>Deployment Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site deployment</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list  <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>-m, -max &lt;count&gt;</dt>
+<dd>limit the maximum number of results</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>lists deployed site</td>
+	</tr>
+	<tr>
+		<td>show <dfn data-title='git commit SHA'>&lt;commitId&gt;</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-d, --details</dt>
+<dd>display log details</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>shows details of the git deployment with the particular [commitid]</td>
+	</tr>
+	<tr>
+		<td>redeploy <dfn data-title='git commit SHA'>&lt;commitId&gt;</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>set specified [commitid] as the active deployment</td>
+	</tr>
+	<tr>
+		<td>github <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>--githubusername &lt;username&gt;</dt>
+<dd>the github username</dd>
+			<dt>--githubpassword &lt;password&gt;</dt>
+<dd>the github password</dd>
+			<dt>--githubrepository</dt>
+<dd>the full name (eg. username/repository) of the github repository</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>setup a <a href='http://github.com'>github service hook</a> for specified web site</td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h2 id='log_commands'>Log Commands</h2>
+<table class='table table-striped'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site log</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>download <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-o, --output &lt;path&gt;</dt>
+<dd>output path, default is current (local) folder</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>
+			<blockquote>requires Logging to be enabled in web site</blockquote>
+			download IIS Log information from the specified web site
+		</td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h3 id='repository_commands'>Repository Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site repository</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>branch <dfn title='branch name to deploy to web site'>&lt;branch&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>set the branch in which to use for website deployment</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>delete the remote git repository for the web site</td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h3 id='location_commands'>Location Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site location</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>enumerate the data centers in which web sites can be created</td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+		
+	
+	
+	
+	
+		
+		<section id="cross-platform">
+			<h3 id='configuration_commands'>Configuration Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site config</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>list the <em>app setting</em> for the specified site</td>
+	</tr>
+	<tr>
+		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration name-value pair &apos;key=value&apos;'>&lt;keyvaluepair&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>add an <em>app setting</em> to the specified web site</td>
+	</tr>
+	<tr>
+		<td>clear <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>removes an <em>app setting</em> from the specified web site</td>
+	</tr>
+	<tr>
+		<td>get <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>gets the current value of web site <em>app setting</em></td>
+	</tr>
+</table>
+		</section>
+		
+	
+	
+
+
+	
+	
+	
+
+	
+    
+		<section id="php">
+			<h2 id='php'>PHP</h2>
+
+<h3 id='php_versions'>PHP Versions</h3>
+<table>
+	<caption>Default Configurations of PHP on Windows Azure Web Sites</caption>
+	<tr>
+		<th>PHP Version</th>
+		<th>PHP Runtime</th>
+		<th>WinCache</th>
+	</tr>
+	<tr>
+		<td>5.3</td>
+		<td><a alt='download PHP 5.3.13' href='http://windows.php.net/downloads/releases/archives/php-5.3.13-nts-Win32-VC9-x86.zip' target='_blank'>5.3.13</a></td>
+		<td><a alt='download WinCache 1.3' href='http://go.microsoft.com/fwlink/?LinkId=259761' target='_blank'>1.3</a></td>
+	</tr>
+	<tr>
+		<td>5.4</td>
+		<td><a href='http://windows.php.net/downloads/releases/archives/php-5.4.0-nts-Win32-VC9-x86.zip' target='_blank'>5.4.0</a></td>
+		<td><a alt='download WinCache 1.3' href='http://go.microsoft.com/fwlink/?LinkId=259761' target='_blank'>1.3</a></td>
+	</tr>
+</table>
+<h3 id='bring_your_own_runtime'>Bring your own Runtime</h3>
+
+<blockquote>
+<p>Windows Azure Web Sites HTTP Handlers require Non-Thread Safe builds on PHP which can be downloaded from <a href='http://windows.php.net'>windows.php.net</a></p>
+</blockquote>
+<table>
+	<caption>HTTP Handler Mapping</caption>
+	<tr>
+		<th>Extension</th>
+		<th>Script Processor Path</th>
+		<th>Additional Arguments (Optional)</th>
+	</tr>
+	<tr>
+		<td><dfn title='All PHP files'>*.php</dfn></td>
+		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
+		<td />
+	</tr>
+	<tr>
+		<td><dfn title='All files'>*</dfn></td>
+		<td>D:\home\sites\bin\php-runtime\php-cgi.exe</td>
+		<td />
+	</tr>
+</table>
+<h3 id='appsettings'>AppSettings</h3>
+<table>
+	<caption>PHP Specific Configuration AppSettings</caption>
+	<tr>
+		<th>Key</th>
+		<th>Value</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>PHP_EXTENSIONS</td>
+		<td>
+			<dl>
+				<dt>comma delimited list of paths to dynamic link libraries</dt>
+				<dd>bin\ext\php_mongo.dll,bin\ext\php_xdebug.dll</dd>
+			</dl>
+		</td>
+		<td>used for loading PHP extensions with the built in versions of PHP</td>
+	</tr>
+	<tr>
+		<td>PHP_ZENDEXTENSIONS</td>
+		<td>
+			<dl>
+				<dt>comma delimited list of paths to dynamic link libraries</dt>
+				<dd>bin\ext\php_xdebug.dll</dd>
+			</dl>
+		</td>
+		<td>used for loading zend extensions with the built in versions of PHP</td>
+	</tr>
+</table>
+<blockquote>
+<p>Currently AppSettings can only able extensions available in wwwroot.</p>
+</blockquote>
+		</section>
+		
+    	
+	
+	
+	
+	
+	
+
+    </div> <!-- /container -->
+  
+	<script src="../js/jquery.min.js" type="text/javascript" />
+	<script src="../js/bootstrap.min.js" type="text/javascript" />
+	<script src="../js/site.js" type="text/javascript" />
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+		try {
+		  var pageTracker = _gat._getTracker("UA-11941712-5");
+		  pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+
+  </body>
+</html>

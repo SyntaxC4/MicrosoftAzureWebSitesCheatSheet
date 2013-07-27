@@ -1,0 +1,32 @@
+<h2 id='log_commands'>Log Commands</h2>
+<table class='table table-striped'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site log</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>download <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-o, --output &lt;path&gt;</dt>
+<dd>output path, default is current (local) folder</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>
+			<blockquote>requires Logging to be enabled in web site</blockquote>
+			download IIS Log information from the specified web site
+		</td>
+	</tr>
+</table>

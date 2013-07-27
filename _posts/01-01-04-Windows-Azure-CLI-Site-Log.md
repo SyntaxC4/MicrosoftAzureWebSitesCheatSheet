@@ -1,6 +1,10 @@
-#### Log Commands
+---
+category: cross-platform
+---
 
-<table class="cli">
+## Log Commands
+
+<table class="table table-striped">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site log</kbd></caption>
 	<tr>
 		<th>command</th>

@@ -1,6 +1,10 @@
-#### Location Commands
+---
+category: cross-platform
+---
 
-<table class="cli">
+### Location Commands
+
+<table class="table table-striped cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site location</kbd></caption>
 	<tr>
 		<th>command</th>

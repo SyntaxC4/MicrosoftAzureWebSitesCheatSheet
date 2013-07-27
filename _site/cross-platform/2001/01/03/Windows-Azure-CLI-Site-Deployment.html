@@ -1,0 +1,90 @@
+<h3 id='deployment_commands'>Deployment Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site deployment</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list  <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>-m, -max &lt;count&gt;</dt>
+<dd>limit the maximum number of results</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>lists deployed site</td>
+	</tr>
+	<tr>
+		<td>show <dfn data-title='git commit SHA'>&lt;commitId&gt;</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-d, --details</dt>
+<dd>display log details</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>shows details of the git deployment with the particular [commitid]</td>
+	</tr>
+	<tr>
+		<td>redeploy <dfn data-title='git commit SHA'>&lt;commitId&gt;</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>set specified [commitid] as the active deployment</td>
+	</tr>
+	<tr>
+		<td>github <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+			<dt>--githubusername &lt;username&gt;</dt>
+<dd>the github username</dd>
+			<dt>--githubpassword &lt;password&gt;</dt>
+<dd>the github password</dd>
+			<dt>--githubrepository</dt>
+<dd>the full name (eg. username/repository) of the github repository</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>setup a <a href='http://github.com'>github service hook</a> for specified web site</td>
+	</tr>
+</table>

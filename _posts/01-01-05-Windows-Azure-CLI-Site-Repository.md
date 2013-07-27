@@ -1,6 +1,10 @@
-#### Repository Commands
+---
+category: cross-platform
+---
 
-<table class="cli">
+### Repository Commands
+
+<table class="table table-striped cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site repository</kbd></caption>
 	<tr>
 		<th>command</th>

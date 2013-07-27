@@ -3,16 +3,50 @@ layout: default
 description: "A quick reference guide to Windows Azure Web Sites features, functionality and tooling."
 ---
 
-{% capture welcome_content %}{% include welcome.md %}{% endcapture %}
-{{ welcome_content|markdownify }}
+{% capture welcome_content %} {% include welcome.md %} {% endcapture %}
 
-{% capture backtotop %}[Back to Top](#top){.top}{% endcapture %}
+<section id="home">
+	{{ welcome_content | markdownify }}
+</section>
+
 {% for post in site.posts reversed %}
-    {% if post.isChild != true and loop.first != true %}
-    {{ backtotop|markdownify }}
+
+	{% if post.category == "aspnet" %}
+		<section id="aspnet">
+			{{ post.content }}
+		</section>
+	{% endif %}
+	
+	{% if post.category == "nodejs" %}
+    
+		<section id="nodejs">
+			{{ post.content }}
+		</section>
+		
     {% endif %}
-    <div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
-    {{ post.content }}
-    </div>
+
+	{% if post.category == "php" %}
+    
+		<section id="php">
+			{{ post.content }}
+		</section>
+		
+    {% endif %}	
+	
+	{% if post.category == "python" %}
+	
+		<section id="python">
+			{{ post.content }}
+		</section>
+	
+	{% endif %}
+	
+	{% if post.category == "cross-platform" %}
+		
+		<section id="cross-platform">
+			{{ post.content }}
+		</section>
+		
+	{% endif %}
+	
 {% endfor %}
-{{ backtotop|markdownify }}

@@ -1,0 +1,6 @@
+body { padding-top: 70px; }
+table.cli caption { text-align: left; padding: 10px; border: 3px outset #d8d8d8;}
+table.ps caption { background-color: #000080; color: #FFF;}
+table.cmd caption { background-color: #000; color: #00FF00;}
+
+.btn .install { width: 50px;}

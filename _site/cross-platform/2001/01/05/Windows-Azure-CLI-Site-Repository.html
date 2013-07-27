@@ -1,0 +1,47 @@
+<h3 id='repository_commands'>Repository Commands</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site repository</kbd></caption>
+	<tr>
+		<th>command</th>
+		<th>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>branch <dfn title='branch name to deploy to web site'>&lt;branch&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>set the branch in which to use for website deployment</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+			<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+			<dt>--json</dt>
+<dd>use json output</dd>
+		</td>
+		<td>delete the remote git repository for the web site</td>
+	</tr>
+</table>
