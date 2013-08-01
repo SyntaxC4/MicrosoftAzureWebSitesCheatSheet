@@ -716,7 +716,186 @@
 	</tr>
 </table>
 <h2 id='configuration_commands'>Configuration Commands</h2>
-<div class='alert alert-danger'>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site appsetting</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Show your site application settings</td>
+	</tr>
+	<tr>
+		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration name-value pair &apos;key=value&apos;'>&lt;keyvaluepair&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Adds an application setting for your site [semi-colon (;) delimitied]</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			</dl>
+		</td>
+		<td>Deletes an application setting for your site</td>
+	</tr>
+	<tr>
+		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Shows an application setting for your site</td>
+	</tr>
+</table><table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site cert</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Show your site certificates</td>
+	</tr>
+	<tr>
+		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;certificate-path&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-k, --key &lt;key&gt;</dt><dd>The certificate key</dd>
+			</dl>
+		</td>
+		<td>Adds a site certificate in pfx format</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			</dl>
+		</td>
+		<td>Deletes a site certificate</td>
+	</tr>
+	<tr>
+		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Shows a site certificate</td>
+	</tr>
+</table><div class='alert alert-danger'>
 <p><strong>Warning!</strong></p>
 <p><code>azure site config</code> has been deprecated and will be removed in a future release. Please use <code>azure site appsetting</code> instead.</p>
 </div><table class='table table-striped cli cmd'>
@@ -805,95 +984,6 @@
 			</dl>
 		</td>
 		<td>gets the current value of web site <em>app setting</em></td>
-	</tr>
-</table><table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site appsetting</kbd></caption>
-	<tr>
-		<th class='w20'>command</th>
-		<th class='w60'>options</th>
-		<th>description</th>
-	</tr>
-	<tr>
-		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
- <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
-		<td>
-			<dl class='dl-horizontal'>
-				<dt>-h, --help</dt>
-<dd>show usage information</dd>
-
-				<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
-				<dt>--json</dt>
-<dd>use json output</dd>
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
-			</dl>
-		</td>
-		<td>Show your site application settings</td>
-	</tr>
-	<tr>
-		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
- <dfn title='configuration name-value pair &apos;key=value&apos;'>&lt;keyvaluepair&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
-		<td>
-			<dl class='dl-horizontal'>
-				<dt>-h, --help</dt>
-<dd>show usage information</dd>
-
-				<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
-				<dt>--json</dt>
-<dd>use json output</dd>
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
-			</dl>
-		</td>
-		<td>Adds an application setting for your site [semi-colon (;) delimitied]</td>
-	</tr>
-	<tr>
-		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
- <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
-		<td>
-			<dl class='dl-horizontal'>
-				<dt>-h, --help</dt>
-<dd>show usage information</dd>
-
-				<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
-				<dt>--json</dt>
-<dd>use json output</dd>
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
-				<dt>-q, --quite</dt>
-<dd>quite mode, do not ask for confirmation</dd>
-			</dl>
-		</td>
-		<td>Deletes an application setting for your site</td>
-	</tr>
-	<tr>
-		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
- <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
-		<td>
-			<dl class='dl-horizontal'>
-				<dt>-h, --help</dt>
-<dd>show usage information</dd>
-
-				<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
-				<dt>--json</dt>
-<dd>use json output</dd>
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
-			</dl>
-		</td>
-		<td>Shows an application setting for your site</td>
 	</tr>
 </table><table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site connectionstring</kbd></caption>
@@ -990,7 +1080,7 @@
 		<td>Shows a connection string for your site</td>
 	</tr>
 </table><table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site cert</kbd></caption>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site defaultdocument</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1014,11 +1104,11 @@
 
 			</dl>
 		</td>
-		<td>Show your site certificates</td>
+		<td>Show your site default documents</td>
 	</tr>
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
- &lt;certificate-path&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
 <p><span class='label label-warning'>new</span></p></td>
 		<td>
 			<dl class='dl-horizontal'>
@@ -1032,14 +1122,16 @@
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
-				<dt>-k, --key &lt;key&gt;</dt><dd>The certificate key</dd>
+				<dt>-d, --document &lt;document&gt;</dt>
+<dd>the new default document</dd>
+				<dt>-p, --position &lt;position&gt;</dt><dd>the position of the new default document</dd>
 			</dl>
 		</td>
-		<td />
+		<td>Add a site default document (appended to list by default)</td>
 	</tr>
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
- &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
 <p><span class='label label-warning'>new</span></p></td>
 		<td>
 			<dl class='dl-horizontal'>
@@ -1053,15 +1145,24 @@
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
+				<dt>-d, --document &lt;document&gt;</dt>
+<dd>the new default document</dd>
 				<dt>-q, --quite</dt>
 <dd>quite mode, do not ask for confirmation</dd>
 			</dl>
 		</td>
-		<td>Deletes a site certificate</td>
+		<td>Deletes a site default document</td>
+	</tr>
+</table><table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site domain</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
 	</tr>
 	<tr>
-		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
- &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+		<td> <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
 <p><span class='label label-warning'>new</span></p></td>
 		<td>
 			<dl class='dl-horizontal'>
@@ -1077,7 +1178,157 @@
 
 			</dl>
 		</td>
-		<td>Shows a site certificate</td>
+		<td />
+	</tr>
+</table><table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site handler</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Show your site handler mappings</td>
+	</tr>
+	<tr>
+		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ [extension] [processor] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-e, --extension &lt;extension&gt;</dt>
+<dd>The extension to map to a handler</dd>
+				<dt>-p, --processor &lt;processor&gt;</dt><dd>The path to the script processor (executable that will process the file given by the extension)</dd>
+				<dt>-a, --arguments &lt;arguments&gt;</dt><dd>The additional arguments</dd>
+			</dl>
+		</td>
+		<td>Add a handler mapping</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ [extension] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-e, --extension &lt;extension&gt;</dt>
+<dd>The extension to map to a handler</dd>
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			</dl>
+		</td>
+		<td>Deletes a site handler mapping</td>
+	</tr>
+</table><table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site </kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td> <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td />
+	</tr>
+</table><table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site scale</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>mode <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ &lt;mode&gt;</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>--mode &lt;mode&gt;</dt><dd>The mode of the site (available are: free, shared and standard)</dd>
+			</dl>
+		</td>
+		<td>Sets the web site mode</td>
+	</tr>
+	<tr>
+		<td>instances <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+ &lt;instances&gt; [size]</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>--instances &lt;instances&gt;</dt><dd>The number of instances</dd>
+				<dt>--size &lt;size&gt;</dt><dd>The size of the instances (available are: small, medium and large)</dd>
+			</dl>
+		</td>
+		<td />
 	</tr>
 </table>
 		</section>

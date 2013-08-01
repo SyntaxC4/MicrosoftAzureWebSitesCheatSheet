@@ -1,5 +1,5 @@
 <table class="table table-striped cli cmd">
-	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site </kbd></caption>
+	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site domain</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
 		<th class="w60">options</th>
