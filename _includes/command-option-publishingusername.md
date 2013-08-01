@@ -1,2 +1,2 @@
-<dt>-pu, --publishingUsername</dt>
+<dt>--gitusername</dt>
 <dd>the publishing username for git</dd>

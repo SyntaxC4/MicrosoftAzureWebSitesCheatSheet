@@ -10,7 +10,7 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 </section>
 
 {% for post in site.posts reversed %}
-
+<!--
 	{% if post.category == "aspnet" %}
 		<section id="aspnet">
 			{{ post.content }}
@@ -40,13 +40,31 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 		</section>
 	
 	{% endif %}
+	-->
 	
-	{% if post.category == "cross-platform" %}
+	{% if post.category == "cli" %}
 		
-		<section id="cross-platform">
+		<section id="cli-reference">
 			{{ post.content }}
 		</section>
 		
 	{% endif %}
+<!--
+	{% if post.category == "powershell" %}
+	
+		<section id="powershell">
+			{{post.content }}
+		</section>
+	
+	{% endif %}
+
+	{% if post.category == "features" %}
+		
+		<section id="service-features">
+			{{ post.content }}
+		</section>
+		
+	{% endif %}
+-->
 	
 {% endfor %}
