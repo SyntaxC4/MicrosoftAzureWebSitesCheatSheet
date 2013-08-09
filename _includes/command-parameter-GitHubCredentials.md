@@ -1,0 +1,1 @@
+-GitHubCredentials &lt;PSCredential&gt;

@@ -1,0 +1,1 @@
+An alternative hostname for the new azure website.

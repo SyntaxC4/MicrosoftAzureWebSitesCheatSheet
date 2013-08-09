@@ -30,6 +30,6 @@
 				<dt>--size &lt;size&gt;</dt><dd>The size of the instances (available are: small, medium and large)</dd>
 			</dl>
 		</td>
-		<td></td>
+		<td>Sets the web site number of instances</td>
 	</tr>
 </table>

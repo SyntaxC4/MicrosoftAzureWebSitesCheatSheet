@@ -10,61 +10,82 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 </section>
 
 {% for post in site.posts reversed %}
-<!--
-	{% if post.category == "aspnet" %}
-		<section id="aspnet">
-			{{ post.content }}
-		</section>
-	{% endif %}
-	
-	{% if post.category == "nodejs" %}
-    
-		<section id="nodejs">
-			{{ post.content }}
-		</section>
-		
-    {% endif %}
-
-	{% if post.category == "php" %}
-    
-		<section id="php">
-			{{ post.content }}
-		</section>
-		
-    {% endif %}	
-	
-	{% if post.category == "python" %}
-	
-		<section id="python">
-			{{ post.content }}
-		</section>
-	
-	{% endif %}
-	-->
-	
-	{% if post.category == "cli" %}
-		
-		<section id="cli-reference">
-			{{ post.content }}
-		</section>
-		
-	{% endif %}
-<!--
-	{% if post.category == "powershell" %}
-	
-		<section id="powershell">
-			{{post.content }}
-		</section>
-	
-	{% endif %}
-
-	{% if post.category == "features" %}
-		
+	<!--
+	{% if post.categories contains "features" %}
 		<section id="service-features">
 			{{ post.content }}
 		</section>
+	{% endif %}
+	
+	{% if post.categories contains "deployment" %}
+		<section id="deployment">
+			{{ content }}
+		</section>
+	{% endif %}
+
+	{% if post.categories contains "Language" %}
+	
+		<section id="language-guide">
+	
+		{% if post.categories contains "aspnet" %}
+			<section id="aspnet">
+				{{ post.content }}
+			</section>
+		{% endif %}
+		
+		{% if post.categories contains "nodejs" %}
+			<section id="nodejs">
+				{{ post.content }}
+			</section>
+		{% endif %}
+
+		{% if post.categories contains "php" %}
+			<section id="php">
+				{{ post.content }}
+			</section>
+		{% endif %}	
+		
+		{% if post.categories contains "python" %}
+			<section id="python">
+				{{ post.content }}
+			</section>
+		{% endif %}
+		
+		</section>
+
+	{% endif %}
+	-->
+	
+	{% if post.categories contains "command-line" %}
+		
+		<section id="cli-reference">
+		
+		{% if post.categories contains "cli" %}
+			<section id="cross-platform">
+				{{ post.content }}
+			</section>
+		{% endif %}
+
+		{% if post.categories contains "powershell" %}
+			<section id="powershell">
+				{{post.content }}
+			</section>
+		{% endif %}
+		
+		</section>
 		
 	{% endif %}
--->
+	<!--
+	{% if post.categories contains "samples" %}
+		<section id="samples">
+			{{ post.content }}
+		</section>
+	{% endif %}
 	
+	{% if post.categories contains "additional-references" %}
+		<section id="additional-references">
+			{{ post.content }}
+		</section>
+	{% endif %}
+	-->
 {% endfor %}

@@ -1,0 +1,1 @@
+When specified, a boolean value is returned

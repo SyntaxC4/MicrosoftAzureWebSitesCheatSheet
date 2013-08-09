@@ -1,0 +1,1 @@
+Determines whether detailed iis errors are logged for the website

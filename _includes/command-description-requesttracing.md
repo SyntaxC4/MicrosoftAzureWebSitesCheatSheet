@@ -1,0 +1,1 @@
+Determines whether request tracing is enabled for the website

@@ -1,0 +1,1 @@
+The username and password credentials used to connect to Github

@@ -1,1 +1,0 @@
-$('#navbar-example').scrollspy()

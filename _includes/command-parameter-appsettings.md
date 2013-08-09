@@ -1,0 +1,1 @@
+-AppSettings &lt;Hashtable&gt;

@@ -6,7 +6,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td> {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>list {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
@@ -15,6 +15,33 @@
 				{% include command-option-subscription.md %}
 			</dl>
 		</td>
-		<td></td>
+		<td>Show your site domains</td>
+	</tr>
+	<tr>
+		<td>add {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>
+			<dl class="dl-horizontal">
+				{% include command-option-help.md %}
+				{% include command-option-verbose.md %}
+				{% include command-option-json.md %}
+				{% include command-option-subscription.md %}
+				{% include command-option-domain.md %}
+			</dl>
+		</td>
+		<td>Add a site domain</td>
+	</tr>
+	<tr>
+		<td>delete {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>
+			<dl class="dl-horizontal">
+				{% include command-option-help.md %}
+				{% include command-option-verbose.md %}
+				{% include command-option-json.md %}
+				{% include command-option-subscription.md %}
+				{% include command-option-domain.md %}
+				{% include command-option-quiet.md %}
+			</dl>
+		</td>
+		<td>Deletes a site domain</td>
 	</tr>
 </table>

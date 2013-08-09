@@ -1,4 +1,4 @@
-<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(Cross Platform)</small></h1>
+<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(Cross Platform 0.7.0)</small></h1>
 
 <p>The Windows Azure cross platform command line tools enable the power of the <a href='https://manage.windowsazure.com'>Windows Azure Management Portal</a> at the tip of your fingers on <strong>Linux</strong>, <strong>OSX</strong> or <strong>Windows</strong>. This guide details the command line options for creating, configuring and scaling Windows Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
@@ -26,7 +26,9 @@
 <li>To remove all of your subscriptions from the tools, run <code>azure account clear</code></li>
 </ol>
 </div>
-<h2 id='general_commands'>General Commands</h2>
+<h2 id='general_web_site_commands'>General Web Site Commands</h2>
+
+<p>General commands for Windows Azure Web Sites include the ability to <strong>create</strong> or <strong>delete</strong> a Web Site in Windows Azure. In addition, they allow you to control they underlying <strong>Web Server</strong> (<abbr title='Internet Information Services'>IIS</abbr>) with actions such as <strong>starting</strong> and <strong>stopping</strong> the site.</p>
 <table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site</kbd></caption>
 	<tr>
@@ -111,36 +113,6 @@
 			</dl>
 		</td>
 		<td>delete the web site [name]</td>
-	</tr>
-	<tr>
-		<td>deploymentscript <dfn data-title='provide options for this command. see help'>[options]</dfn>
-</td>
-		<td>
-			<dl class='dl-horizontal'>
-				<dt>-h, --help</dt>
-<dd>show usage information</dd>
-
-				<dt>-v, --verbose</dt>
-<dd>use verbose output</dd>
-				<dt>--json</dt>
-<dd>use json output</dd>
-				<dt>-r, --repositoryRoot [dir path]</dt><dd>The root path for the repository (default: .)</dd>
-				<dt>--aspWAP projectFilePath></dt><dd>Create a deployment script for .NET web application, specify the project file path</dd>
-				<dt>--aspWebSite</dt><dd>Create a deployment script for asp website</dd>
-				<dt>--node</dt><dd>Create a deployment script for node.js website</dd>
-				<dt>--php</dt><dd>Create a deployment script for php website</dd>
-				<dt>--python</dt><dd>Create a deployment script for python website</dd>
-				<dt>--basic</dt><dd>Create a deployment script for any other website</dd>
-				<dt>-s, --solutionFile [file path]</dt><dd>The solution file path (sln)</dd>
-				<dt>-p, --sitePath [directory path]</dt><dd>The path to the site being deployed (default: same as repositoryRoot)</dd>
-				<dt>-t, --scriptType [batch|bash]</dt><dd>The script output type (default: batch)</dd>
-				<dt>-o, --outputPath &lt;output path&gt;</dt><dd>The path to output generated script (default: same as repository root)</dd>
-				<dt>-y, --suppressPrompt</dt><dd>Suppresses prompting to confirm you want to overwrite an existing destination file</dd>
-				<dt>--no-dot-deployment</dt><dd>Do not generate the .deployment file.</dd>
-				<dt>--no-solution</dt><dd>Do not require a solution file path (only for --aspWAP otherwise ignored).</dd>
-			</dl>
-		</td>
-		<td />
 	</tr>
 	<tr>
 		<td>set <dfn data-title='provide options for this command. see help'>[options]</dfn>
@@ -245,13 +217,43 @@
 		<td>stop, then start the Internet Information Services (IIS) site</td>
 	</tr>
 </table>
-<h2 id='deployment_commands'>Deployment Commands</h2>
+<h2 id='web_site_deployment_commands'>Web Site Deployment Commands</h2>
 <table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site deployment</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
 		<th>description</th>
+	</tr>
+	<tr>
+		<td>deploymentscript <dfn data-title='provide options for this command. see help'>[options]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-r, --repositoryRoot [dir path]</dt><dd>The root path for the repository (default: .)</dd>
+				<dt>--aspWAP projectFilePath></dt><dd>Create a deployment script for .NET web application, specify the project file path</dd>
+				<dt>--aspWebSite</dt><dd>Create a deployment script for asp website</dd>
+				<dt>--node</dt><dd>Create a deployment script for node.js website</dd>
+				<dt>--php</dt><dd>Create a deployment script for php website</dd>
+				<dt>--python</dt><dd>Create a deployment script for python website</dd>
+				<dt>--basic</dt><dd>Create a deployment script for any other website</dd>
+				<dt>-s, --solutionFile [file path]</dt><dd>The solution file path (sln)</dd>
+				<dt>-p, --sitePath [directory path]</dt><dd>The path to the site being deployed (default: same as repositoryRoot)</dd>
+				<dt>-t, --scriptType [batch|bash]</dt><dd>The script output type (default: batch)</dd>
+				<dt>-o, --outputPath &lt;output path&gt;</dt><dd>The path to output generated script (default: same as repository root)</dd>
+				<dt>-y, --suppressPrompt</dt><dd>Suppresses prompting to confirm you want to overwrite an existing destination file</dd>
+				<dt>--no-dot-deployment</dt><dd>Do not generate the .deployment file.</dd>
+				<dt>--no-solution</dt><dd>Do not require a solution file path (only for --aspWAP otherwise ignored).</dd>
+			</dl>
+		</td>
+		<td>Generate custom deployment script</td>
 	</tr>
 	<tr>
 		<td>list  <dfn data-title='provide options for this command. see help'>[options]</dfn>
@@ -369,7 +371,7 @@
 		<td>Sets the deployment credentials</td>
 	</tr>
 </table>
-<h2 id='repository_commands'>Repository Commands</h2>
+<h2 id='web_site_repository_commands'>Web Site Repository Commands</h2>
 <table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site repository</kbd></caption>
 	<tr>
@@ -440,7 +442,7 @@
 		<td>Sync your repository</td>
 	</tr>
 </table>
-<h2 id='location_commands'>Location Commands</h2>
+<h2 id='web_site_location_commands'>Web Site Location Commands</h2>
 <table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site location</kbd></caption>
 	<tr>
@@ -465,7 +467,9 @@
 		<td>enumerate the data centers in which web sites can be created</td>
 	</tr>
 </table>
-<h2 id='configuration_commands'>Configuration Commands</h2>
+<h2 id='web_site_configuration_commands'>Web Site Configuration Commands</h2>
+
+<h3 id='app_settings_configuration'>App Settings Configuration</h3>
 <table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site appsetting</kbd></caption>
 	<tr>
@@ -555,7 +559,9 @@
 		</td>
 		<td>Shows an application setting for your site</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+</table>
+<h3 id='ssl_certificate_configuration'>SSL Certificate Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site cert</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -645,7 +651,9 @@
 		</td>
 		<td>Shows a site certificate</td>
 	</tr>
-</table><div class='alert alert-danger'>
+</table>
+<h3 id='site_configuration'>Site Configuration</h3>
+<div class='alert alert-danger'>
 <p><strong>Warning!</strong></p>
 <p><code>azure site config</code> has been deprecated and will be removed in a future release. Please use <code>azure site appsetting</code> instead.</p>
 </div><table class='table table-striped cli cmd'>
@@ -735,7 +743,9 @@
 		</td>
 		<td>gets the current value of web site <em>app setting</em></td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+</table>
+<h3 id='connection_string_configuration'>Connection String Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site connectionstring</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -829,7 +839,9 @@
 		</td>
 		<td>Shows a connection string for your site</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+</table>
+<h3 id='default_document_configuration'>Default Document Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site defaultdocument</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -903,7 +915,9 @@
 		</td>
 		<td>Deletes a site default document</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+</table>
+<h3 id='custom_domain_configuration'>Custom Domain Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site domain</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -911,7 +925,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td> <dfn data-title='provide options for this command. see help'>[options]</dfn>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
 <p><span class='label label-warning'>new</span></p></td>
 		<td>
@@ -928,9 +942,57 @@
 
 			</dl>
 		</td>
-		<td />
+		<td>Show your site domains</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+	<tr>
+		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-d, --domain &lt;domain&gt;</dt>
+<dd>the domain</dd>
+			</dl>
+		</td>
+		<td>Add a site domain</td>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-d, --domain &lt;domain&gt;</dt>
+<dd>the domain</dd>
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			</dl>
+		</td>
+		<td>Deletes a site domain</td>
+	</tr>
+</table>
+<h3 id='http_handler_configuration'>HTTP Handler Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site handler</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -1005,15 +1067,61 @@
 		</td>
 		<td>Deletes a site handler mapping</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site </kbd></caption>
+</table>
+<h3 id='logging_configuration'>Logging Configuration</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>waws-dev$ </bdi><kbd>azure site log</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
 		<th>description</th>
 	</tr>
 	<tr>
-		<td> <dfn data-title='provide options for this command. see help'>[options]</dfn>
+		<td>download <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-o, --output &lt;path&gt;</dt><dd>output path, default is local folder</dd>
+			</dl>
+		</td>
+		<td>Download diagnostic log</td>
+	</tr>
+	<tr>
+		<td>tail <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+				<dt>-p, --path &lt;path&gt;</dt><dd>the log path under LogFiles folder</dd>
+				<dt>-f, --filter &lt;filter&gt;</dt><dd>filter matching line</dd>
+				<dt>--log</dt><dd>write output as log data</dd>
+			</dl>
+		</td>
+		<td>live diagnostic log</td>
+	</tr>
+	<tr>
+		<td>set <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
 <p><span class='label label-warning'>new</span></p></td>
 		<td>
@@ -1028,11 +1136,24 @@
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
+				<dt>-a, --application</dt><dd>Use this flag to enable application diagnostics</dd>
+				<dt>-A, --disable-application</dt><dd>Use this flag to disable application diagnostics</dd>
+				<dt>-w, --web-server-logging</dt><dd>Use this flag to enable web server logging</dd>
+				<dt>-W, --disable-web-server-logging</dt><dd>Use this flag to disable web server logging</dd>
+				<dt>-e, --detailed-error-messages</dt><dd>Use this flag to enable detailed error messages</dd>
+				<dt>-E, --disabled-detailed-error-messages</dt><dd>Use this flag to disable detailed error messages</dd>
+				<dt>-f, --failed-request-tracing</dt><dd>Use this flag to enable failed request tracing</dd>
+				<dt>-F, --disable-failed-request-tracing</dt><dd>Use this flag to disable failed request tracing</dd>
+				<dt>-o, --output &lt;output&gt;</dt><dd>Takes file or storage. When -a is specified, use this parameter to specify the output of the log</dd>
+				<dt>-l, --level</dt><dd>Takes error, warning, verbose or info. When -a is specified, use this parameter to specify the log level. (default is error)</dd>
+				<dt>-t, --storage-account</dt><dd>Use this parameter to specify the storage account where the logs will be stored</dd>
 			</dl>
 		</td>
-		<td />
+		<td>Configure diagnostics</td>
 	</tr>
-</table><table class='table table-striped cli cmd'>
+</table>
+<h3 id='scale_configuration'>Scale Configuration</h3>
+<table class='table table-striped cli cmd'>
 	<caption><bdi>waws-dev$ </bdi><kbd>azure site scale</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
@@ -1078,6 +1199,6 @@
 				<dt>--size &lt;size&gt;</dt><dd>The size of the instances (available are: small, medium and large)</dd>
 			</dl>
 		</td>
-		<td />
+		<td>Sets the web site number of instances</td>
 	</tr>
 </table>

@@ -1,0 +1,1 @@
+-NetFrameworkVersion &lt;string&gt;

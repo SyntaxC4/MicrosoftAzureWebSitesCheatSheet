@@ -1,0 +1,1 @@
+ Determines whether http logging is enabled for the website

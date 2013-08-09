@@ -1,0 +1,662 @@
+<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(PowerShell 0.6.18)</small></h1>
+
+<p>The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Windows Azure Web Sites.</p>
+<div class='panel panel-primary hidden-sm'>
+<div class='panel-heading'>Get the Tools</div>
+	<p>
+		<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
+	</p>
+</div><div class='panel panel-primary'>
+<div class='panel-heading'>Getting Setup</div>
+<ol>
+	<li>Run <code>Get-AzurePublishSettingsFile</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
+	<li>Run <code>Import-AzurePublishSettingsFile &lt;path-to-publishsettings-file&gt;</code> to make your subscriptions available to the PowerShell command-line.</li>
+	<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>Get-AzureSubscription</code> to identify which subscriptions were imported.</li>
+	<li>Run <code>Select-AzureSubscription &lt;Name&gt;</code> to select the subscription to use</li>
+	<li>To remove all of your subscriptions from PowerShell, run <code>Get-AzureSubscription | Remove-AzureSubscription</code></li>
+</ol>
+</div>
+<h2 id='web_site_management'>Web Site Management</h2>
+
+<p>These Cmdlets enable the ability to create new Windows Azure Web Sites with options to associate a local Git or GitHub repository to your site. The Cmdlets also allow the deletion of Web Sites from your subscription.</p>
+<table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>New-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-Name &lt;string&gt;
+			</dl>
+		</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-Location &lt;string&gt;
+			</dl>
+		</td>
+		<td>The data center where the website should be deployed</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>2</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-HostName &lt;string&gt;
+			</dl>
+		</td>
+		<td>An alternative hostname for the new azure website.</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>3</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-PublishingUsername &lt;string&gt;
+			</dl>
+		</td>
+		<td>The username you have specified in the Windows Azure Portal for Git deployment</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>4</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-Git
+			</dl>
+		</td>
+		<td>Set up a local git repository and link it to the website.  If specified, this will set up a git repository in
+the local directory and add a remote named 'azure' that links to the website in Windows Azure.</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-GitHub
+			</dl>
+		</td>
+		<td>If enabled, link this website with an existing Github repository.  Commits to the Giuthub repository will be
+pushed to the website in Windows Azure.</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-GitHubCredentials &lt;PSCredential&gt;
+			</dl>
+		</td>
+		<td>The username and password credentials used to connect to Github</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<dl class='dl-horizontal'>
+				-GitHubRepository &lt;string&gt;
+			</dl>
+		</td>
+		<td>The full name of the Github repository to link to this website.  For example, myaccount/myrepo</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table><table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Remove-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-Force</td>
+		<td>If specified, bypass confirmation prompts and delete the specified website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>false</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table>
+<h2 id='web_site_configuration'>Web Site Configuration</h2>
+
+<p>These Cmdlets enable the ability to list or set configuration settings in Windows Azure Web Sites.</p>
+<table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Get-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>
+			-Name &lt;string&gt;
+		</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table><table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Set-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-SiteWithConfig &lt;SiteWithConfig&gt;</td>
+		<td>The configuration used by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>2</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-NumberOfWorkers &lt;Int32&gt;</td>
+		<td>The number of worker processes executing the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-DefaultDocuments &lt;String[]&gt;</td>
+		<td>The documents that are automatically displayed when browsing the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-NetFrameworkVersion &lt;string&gt;</td>
+		<td>The version of the .Net Framework required by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-PhpVersion &lt;string&gt;</td>
+		<td>The PHP version required by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-RequestTracingEnabled [&lt;Boolean&gt;]</td>
+		<td>Determines whether request tracing is enabled for the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-HttpLoggingEnabled [&lt;Boolean&gt;]</td>
+		<td> Determines whether http logging is enabled for the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-DetailedErrorLoggingEnabled [&lt;Boolean&gt;]</td>
+		<td>Determines whether detailed iis errors are logged for the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-HostNames &lt;string[]&gt;</td>
+		<td>The fully qualified hostnames that can be used to access the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-AppSettings &lt;Hashtable&gt;</td>
+		<td>The environment variables that will be used by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-Metadata &lt;NameValuePair&gt;</td>
+		<td>The Metadata for the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-ConnectionStrings &lt;ConnStringPropertyBag&gt;</td>
+		<td>The connection strings used by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-HandlerMappings &lt;HandlerMapping[]&gt;</td>
+		<td>The Handler Mappings used by the website</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+	<tr>
+		<td>-PassThru &lt;Switch&gt;</td>
+		<td>When specified, a boolean value is returned</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>named</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table>
+<h2 id='web_site_operations'>Web Site Operations</h2>
+
+<p>These Cmdlets enable the ability to <strong>start</strong>, <strong>stop</strong> or <strong>restart</strong> a Web Site. The Cmdlets also launch the Web Site in the default web browser.</p>
+<table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Start-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table><table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Stop-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table><table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Restart-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th>
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table><table class='table table-striped cli ps'>
+<caption><bdi>PS > </bdi><kbd>Show-AzureWebSite</kbd></caption>
+	<tr>
+		<th class='w30'>parameter</th>
+		<th>description</th> 
+		<th class='w20'>parameter help</th>
+	</tr>
+	<tr>
+		<td>-Name &lt;string&gt;</td>
+		<td>The name of the Web Site</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>Required?</dt>
+<dd>false</dd>
+				<dt>Position?</dt>
+<dd>1</dd>
+				<dt>Default value</dt>
+<dd />
+				<dt>Accept pipeline input?</dt>
+<dd>true</dd>
+				<dt>Accept Wildcard characters?</dt>
+<dd>false</dd>
+			</dl>
+		</td>
+	</tr>
+</table>

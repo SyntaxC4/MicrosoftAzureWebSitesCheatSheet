@@ -1,9 +1,9 @@
 <table class="table table-bordered">
 	<tr>
-		<td></td>
-		<td>HTTP Server</td>
-		<td>Protocols</td>
-		<td>Language Support</td>
+		<th></th>
+		<th>HTTP Server</th>
+		<th>Protocols</th>
+		<th>Language Support</th>
 	</tr>
 	<tr>
 		<td></td>
