@@ -10,7 +10,7 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 </section>
 
 {% for post in site.posts reversed %}
-	<!--
+	
 	{% if post.categories contains "features" %}
 		<section id="service-features">
 			{{ post.content }}
@@ -23,7 +23,7 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 		</section>
 	{% endif %}
 
-	{% if post.categories contains "Language" %}
+	{% if post.categories contains "language" %}
 	
 		<section id="language-guide">
 	
@@ -50,11 +50,10 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 				{{ post.content }}
 			</section>
 		{% endif %}
-		
+	
 		</section>
 
 	{% endif %}
-	-->
 	
 	{% if post.categories contains "command-line" %}
 		
@@ -75,7 +74,7 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 		</section>
 		
 	{% endif %}
-	<!--
+	
 	{% if post.categories contains "samples" %}
 		<section id="samples">
 			{{ post.content }}
@@ -87,5 +86,5 @@ description: "A quick reference guide to Windows Azure Web Sites features, funct
 			{{ post.content }}
 		</section>
 	{% endif %}
-	-->
+	
 {% endfor %}

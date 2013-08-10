@@ -38,9 +38,9 @@
               <ul class="dropdown-menu">
                 <li><a href="#asp">ASP</a></li>
                 <li><a href="#aspnet">ASP.NET</a></li>
-                <li><a href="#nodejs">NODE.JS</a></li>
+                <li><a href="#nodejs">NODE.JS</a></li>-->
                 <li><a href="#php">PHP</a></li>
-                <li><a href="#python">PYTHON</a></li>
+                <!--<li><a href="#python">PYTHON</a></li>
               </ul>
             </li>-->
 			<li class="dropdown">
@@ -72,7 +72,7 @@
 </section>
 
 
-	<!--
+	
 	
 		<section id="service-features">
 			<h1 id='features'>Features</h1>
@@ -138,97 +138,183 @@
 	
 
 	
-	-->
-	
-	
-	<!--
 	
 	
 	
-	-->
-
-	<!--
+	
 	
 	
 	
 
 	
-	-->
-	
-	
-	<!--
-	
-	
-	
-	-->
-
-	<!--
 	
 	
 	
 
 	
-	-->
-	
-	
-	<!--
 	
 	
 	
-	-->
-
-	<!--
+	
 	
 	
 	
 
 	
-	-->
-	
-	
-	<!--
-	
-	
-	
-	-->
-
-	<!--
 	
 	
 	
 
 	
-	-->
-	
-	
-	<!--
 	
 	
 	
-	-->
-
-	<!--
+	
 	
 	
 	
 
 	
-	-->
-	
-	
-	<!--
-	
-	
-	
-	-->
-
-	<!--
 	
 	
 	
 
 	
-	-->
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+		<section id="language-guide">
+	
+		
+		
+		
+
+		
+			<section id="php">
+				<h2 id='php'>PHP</h2>
+
+<h3 id='php_runtimes'>PHP Runtimes</h3>
+<table class='table table-bordered'>
+	<tr>
+		<th>PHP</th>
+		<th>WinCache</th>
+	</tr>
+	<tr>
+		<td>5.3.13</td>
+		<td rowspan='2'>1.3</td>
+	</tr>
+	<tr>
+		<td>5.4.0</td>
+	</tr>
+</table>
+<h4 id='bring_your_own_runtime'>Bring your own Runtime</h4>
+<div class='alert alert-danger'>
+<strong>Warning!</strong> Bring your own Runtime is available to enable you to bring a specific version of PHP to run your Web Application. This option is enabled for <strong>Advanced Users</strong> only.
+</div><div class='alert alert-info'>
+Bring your own runtime disables the default PHP Runtime in Windows Azure Web Sites. So be sure to upload your own <em>php.ini</em>.
+</div>
+<p>If an application you are attempting to run on Windows Azure Web Sites needs a specific version of PHP, you will need to bring your own runtime.</p>
+
+<p>In order to do this there are several steps involved:</p>
+
+<ol>
+<li>Download</li>
+
+<li>Configure</li>
+</ol>
+
+<h3 id='default_php_extensions'>Default PHP Extensions</h3>
+<div class='alert alert-info'>
+To enable extensions in Windows Azure Web Sites follow the directions under the <a href='#enable-php-extensions'>Enable PHP Extensions</a> section.
+</div><div class='alert alert-danger'>
+If you need to enable default PHP extensions that are not highlighted below, you must upload them to your Windows Azure Web Site then enable as instructed in <a href='#enable-php-'>Enable PHP Extensions</a>. Loading default extensions in this way is required as extensions cannot be dynamically loaded in the <em>.user.ini</em> file.
+</div><ul class='list-group extensions'>
+	<li class='list-group-item is-disabled'>php_bz2.dll</li>
+	<li class='list-group-item is-enabled'>php_com_dotnet.dll</li>
+	<li class='list-group-item is-enabled'>php_curl.dll</li>
+	<li class='list-group-item is-disabled'>php_enchant.dll</li>
+	<li class='list-group-item is-enabled'>php_exif.dll</li>
+	<li class='list-group-item is-disabled'>php_fileinfo.dll</li>
+	<li class='list-group-item is-enabled'>php_gd2.dll</li>
+	<li class='list-group-item is-enabled'>php_gettext.dll</li>
+	<li class='list-group-item is-disabled'>php_gmp.dll</li>
+	<li class='list-group-item is-enabled'>php_imap.dll</li>
+	<li class='list-group-item is-disabled'>php_interbase.dll</li>
+	<li class='list-group-item is-disabled'>php_intl.dll</li>
+	<li class='list-group-item is-disabled'>php_ldap.dll</li>
+	<li class='list-group-item is-enabled'>php_mbstring.dll</li>
+	<li class='list-group-item is-enabled'>php_mysql.dll</li>
+	<li class='list-group-item is-enabled'>php_mysqli.dll</li>
+	<li class='list-group-item is-disabled'>php_oci8.dll</li>
+	<li class='list-group-item is-disabled'>php_oci8_11g.dll</li>
+	<li class='list-group-item is-enabled'>php_openssl.dll</li>
+	<li class='list-group-item is-disabled'>php_pdo_firebird.dll</li>
+	<li class='list-group-item is-enabled'>php_pdo_mysql.dll</li>
+	<li class='list-group-item is-disabled'>php_pdo_oci.dll</li>
+	<li class='list-group-item is-disabled'>php_pdo_odbc.dll</li>
+	<li class='list-group-item is-disabled'>php_pdo_pgsql.dll</li>
+	<li class='list-group-item is-enabled'>php_pdo_sqlite.dll</li>
+	<li class='list-group-item is-disabled'>php_pgsql.dll</li>
+	<li class='list-group-item is-disabled'>php_shmop.dll</li>
+	<li class='list-group-item is-disabled'>php_snmp.dll</li>
+	<li class='list-group-item is-enabled'>php_soap.dll</li>
+	<li class='list-group-item is-enabled'>php_sockets.dll</li>
+	<li class='list-group-item is-disabled'>php_sqlite3.dll</li>
+	<li class='list-group-item is-disabled'>php_sybase_ct.dll</li>
+	<li class='list-group-item is-enabled'>php_tidy.dll</li>
+	<li class='list-group-item is-enabled'>php_wincache.dll</li>
+	<li class='list-group-item is-enabled'>php_xmlrpc.dll</li>
+	<li class='list-group-item is-disabled'>php_xsl.dll</li>
+</ul>
+<h3 id='php_specific_appsettings'>PHP Specific AppSettings</h3>
+			</section>
+			
+		
+		
+	
+		</section>
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+
+	
 	
 	
 		
@@ -1448,19 +1534,18 @@
 		</section>
 		
 	
-	<!--
 	
 	
-	
-	-->
-
-	<!--
 	
 	
 	
 
 	
-	-->
+	
+	
+	
+
+	
 	
 	
 		
@@ -2138,11 +2223,11 @@ pushed to the website in Windows Azure.</td>
 		</section>
 		
 	
-	<!--
 	
 	
 	
-	-->
+	
+	
 
     </div> <!-- /container -->
   

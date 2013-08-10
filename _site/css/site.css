@@ -31,10 +31,14 @@ td.is-supported { color: #468847; background-color: #dff0d8 !important; }
 	Lists
 */
 
-dl.dl-horizontal dt {
-	text-align: left;
-}
+dl.dl-horizontal dt { text-align: left; }
 
+li.is-disabled { color: #ccc; background-color: #f9f9f9 !important; }
+li.is-enabled { color: #468847; background-color: #dff0d8 !important; }
+
+ul.extensions { width: 100%; }
+ul.extensions li { width: 160px; display: inline-block; margin-bottom: 5px; }
+ 
 /*
 	Styles
 */
