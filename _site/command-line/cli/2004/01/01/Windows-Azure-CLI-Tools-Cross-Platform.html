@@ -2,29 +2,37 @@
 
 <p>The Windows Azure cross platform command line tools enable the power of the <a href='https://manage.windowsazure.com'>Windows Azure Management Portal</a> at the tip of your fingers on <strong>Linux</strong>, <strong>OSX</strong> or <strong>Windows</strong>. This guide details the command line options for creating, configuring and scaling Windows Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
-<div class='panel-heading'>Get the Tools</div>
-	<h5>Binary</h5>
-	<p>
-		<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
-		<a class='btn btn-success' href='http://go.microsoft.com/fwlink/?linkid=253471&amp;clcid=0x409'>Mac Installer</a>
-	</p>
-	<h5>Command Line</h5>
-	<p>
-		<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
-		<code>npm install azure-cli -g</code>
-	</p>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>	
+		<h4>Binary</h4>
+		<p>
+			<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
+			<a class='btn btn-success' href='http://go.microsoft.com/fwlink/?linkid=253471&amp;clcid=0x409'>Mac Installer</a>
+		</p>
+		<h4>Command Line</h4>
+		<p>
+			<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
+			<code>npm install azure-cli -g</code>
+		</p>
+	</div>
 </div><div class='panel panel-primary'>
-<div class='panel-heading'>Getting Setup</div>
-<ol>
-	<li>Run <code>azure account download</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
-	<li>Run <code>azure account import &lt;path-to-publishsettings-file&gt;</code> to import your subscriptions to be available to the tools</li>
-	<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>azure account list</code> to identify which subscriptions were imported
-		<ul>
-			<li>If you have multiple subscriptions, run <code>azure account set &lt;subscription-name&gt;</code> to select the subscription to use</li>
-		</ul>
-	</li>
-<li>To remove all of your subscriptions from the tools, run <code>azure account clear</code></li>
-</ol>
+	<div class='panel-heading'>
+			<h3 class='panel-title'>Getting Setup</h3>
+	</div>
+	<div class='panel-body'>
+		<ol>
+			<li>Run <code>azure account download</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
+			<li>Run <code>azure account import &lt;path-to-publishsettings-file&gt;</code> to import your subscriptions to be available to the tools</li>
+			<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>azure account list</code> to identify which subscriptions were imported
+				<ul>
+					<li>If you have multiple subscriptions, run <code>azure account set &lt;subscription-name&gt;</code> to select the subscription to use</li>
+				</ul>
+			</li>
+			<li>To remove all of your subscriptions from the tools, run <code>azure account clear</code></li>
+		</ol>
+	</div>
 </div>
 <h2 id='general_web_site_commands'>General Web Site Commands</h2>
 

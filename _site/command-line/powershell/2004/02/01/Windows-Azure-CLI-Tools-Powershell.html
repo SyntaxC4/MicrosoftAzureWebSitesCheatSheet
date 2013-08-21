@@ -2,19 +2,25 @@
 
 <p>The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Windows Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
-<div class='panel-heading'>Get the Tools</div>
-	<p>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>
 		<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
-	</p>
+	</div>
 </div><div class='panel panel-primary'>
-<div class='panel-heading'>Getting Setup</div>
-<ol>
-	<li>Run <code>Get-AzurePublishSettingsFile</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
-	<li>Run <code>Import-AzurePublishSettingsFile &lt;path-to-publishsettings-file&gt;</code> to make your subscriptions available to the PowerShell command-line.</li>
-	<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>Get-AzureSubscription</code> to identify which subscriptions were imported.</li>
-	<li>Run <code>Select-AzureSubscription &lt;Name&gt;</code> to select the subscription to use</li>
-	<li>To remove all of your subscriptions from PowerShell, run <code>Get-AzureSubscription | Remove-AzureSubscription</code></li>
-</ol>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Getting Setup</h3>
+	</div>
+	<div class='panel-body'>
+		<ol>
+			<li>Run <code>Get-AzurePublishSettingsFile</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
+			<li>Run <code>Import-AzurePublishSettingsFile &lt;path-to-publishsettings-file&gt;</code> to make your subscriptions available to the PowerShell command-line.</li>
+			<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>Get-AzureSubscription</code> to identify which subscriptions were imported.</li>
+			<li>Run <code>Select-AzureSubscription &lt;Name&gt;</code> to select the subscription to use</li>
+			<li>To remove all of your subscriptions from PowerShell, run <code>Get-AzureSubscription | Remove-AzureSubscription</code></li>
+		</ol>
+	</div>
 </div>
 <h2 id='web_site_management'>Web Site Management</h2>
 

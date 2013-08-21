@@ -3,18 +3,22 @@
 */
 
 body { padding-top: 70px; }
+section { margin-top: 20px; }
 
 /*
 	Navigation
 */
 
 .navbar { background-color: #2e9afe; }
-.navbar a { color: #fff; }
-.navbar a:hover { color: #fff; }
-.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus{ background-color: #0174df; color: #fff; }
-.navbar-nav > li > a { color: #fff; }
-.navbar-nav > li > a:hover, .navbar-nav > li > a:focus { background-color: transparent;}
-.navbar-nav > .dropdown > a .caret { border-top-color: #fff; }
+.navbar a.navbar-brand { color: #fff; }
+.navbar a.navbar-brand:hover { color: #fff; }
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus{ background-color: #0174df; color: #fff; }
+.navbar-default .navbar-nav > li > a { color: #fff; }
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus { background-color: transparent;}
+.navbar-default .navbar-nav>.dropdown>a .caret { border-top-color: #fff; }
 
 /*
 	Tables 
@@ -38,6 +42,8 @@ li.is-enabled { color: #468847; background-color: #dff0d8 !important; }
 
 ul.extensions { width: 100%; }
 ul.extensions li { width: 160px; display: inline-block; margin-bottom: 5px; }
+ 
+ol ul { list-style-type: square;}
  
 /*
 	Styles

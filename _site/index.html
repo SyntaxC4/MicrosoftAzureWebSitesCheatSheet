@@ -18,46 +18,51 @@
 <body data-spy="scroll" data-target="#waws-navbar" data-offset="0">
 <a name="top"></a>	
 	
-	<div id="waws-navbar" class="navbar navbar-fixed-top">
-	<a href="https://github.com/syntaxc4/windowsazurewebsitescheatsheet" class="hidden-sm"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".wawscs-navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">WAWS Cheat Sheet</a>
-        <div class="nav-collapse collapse wawscs-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#home">Welcome</a></li>
-            <!--<li><a href="#service-features">Features</a></li>
-            <li><a href="#deployment">Deployment</a></li>
-            <li class="dropdown">
-			  <a name="langhack" href="#language-guide" style="display:none;"></a>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language Guide <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#asp">ASP</a></li>
-                <li><a href="#aspnet">ASP.NET</a></li>
-                <li><a href="#nodejs">NODE.JS</a></li>-->
-                <li><a href="#php">PHP</a></li>
-                <!--<li><a href="#python">PYTHON</a></li>
-              </ul>
-            </li>-->
-			<li class="dropdown">
-				<a name="clihack" href="#cli-reference" style="display:none;"></a>
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				CLI Reference <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#cross-platform">Cross Platform</a></li>
-					<li><a href="#powershell">PowerShell</a></li>
-				</ul>
-			</li>
-			<!--<li><a href="#samples">Samples</a></li>
-			<li><a href="#additional-references">Additional References</a></li>-->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+		<a href="https://github.com/syntaxc4/windowsazurewebsitescheatsheet" class="hidden-sm"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+	
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-wawscs-collapse">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">WAWS Cheat Sheet</a>
+		</div>
+	
+		<div class="collapse navbar-collapse navbar-wawscs-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#home">Welcome</a></li>
+				<li><a href="#service-features">Features</a></li>
+				<li><a href="#deployment">Deployment</a></li>
+				<li class="dropdown">
+				  <a name="langhack" href="#language-guide" style="display:none;"></a>
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language Guide <b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#asp">ASP</a></li>
+					<li><a href="#aspnet">ASP.NET</a></li>
+					<li><a href="#nodejs">NODE.JS</a></li>
+					<li><a href="#php">PHP</a></li>
+					<li><a href="#python">PYTHON</a></li>
+				  </ul>
+				</li>
+				<li class="dropdown">
+					<a name="clihack" href="#cli-reference" style="display:none;"></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					CLI Reference <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#cross-platform">Cross Platform</a></li>
+						<li><a href="#powershell">PowerShell</a></li>
+					</ul>
+				</li>
+				<li><a href="#samples">Samples</a></li>
+				<li><a href="#additional-references">Additional References</a></li>
           </ul>
-        </div><!-- /nav-collapse -->
-      </div><!-- /container -->
-    </div><!-- /navbar -->
+		</div>	
+	</nav>
+	
 	<div class="container">
 		
 
@@ -72,7 +77,7 @@
 </section>
 
 
-	
+	<!--
 	
 		<section id="service-features">
 			<h1 id='features'>Features</h1>
@@ -136,7 +141,7 @@
 	
 	
 	
-
+-->
 	
 	
 	
@@ -146,25 +151,11 @@
 	
 	
 
+	<!--
 	
 	
 	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-
+-->
 	
 	
 	
@@ -174,11 +165,25 @@
 	
 	
 
+	<!--
+	
+	
+	
+-->
+	
+	
+	
+	
 	
 	
 	
 	
 
+	<!--
+	
+	
+	
+-->
 	
 	
 	
@@ -188,11 +193,11 @@
 	
 	
 
+	<!--
 	
 	
 	
-	
-
+-->
 	
 	
 		<section id="language-guide">
@@ -205,15 +210,17 @@
 			<section id="php">
 				<h2 id='php'>PHP</h2>
 
+<p>So, you fancy programming PHP do ya? Well, here are some tips specifically for you.</p>
+
 <h3 id='php_runtimes'>PHP Runtimes</h3>
 <table class='table table-bordered'>
-	<tr>
+	<tr class='active'>
 		<th>PHP</th>
 		<th>WinCache</th>
 	</tr>
 	<tr>
-		<td>5.3.13</td>
-		<td rowspan='2'>1.3</td>
+		<td class='success'>5.3.13</td>
+		<td rowspan='2'>1.3.4.0</td>
 	</tr>
 	<tr>
 		<td>5.4.0</td>
@@ -221,18 +228,68 @@
 </table>
 <h4 id='bring_your_own_runtime'>Bring your own Runtime</h4>
 <div class='alert alert-danger'>
-<strong>Warning!</strong> Bring your own Runtime is available to enable you to bring a specific version of PHP to run your Web Application. This option is enabled for <strong>Advanced Users</strong> only.
+<strong>Warning!</strong> Bring your own Runtime is available to enable you to bring a specific version of PHP to run your Web Application. This option is enabled for <strong>Advanced Users</strong> only. 
 </div><div class='alert alert-info'>
-Bring your own runtime disables the default PHP Runtime in Windows Azure Web Sites. So be sure to upload your own <em>php.ini</em>.
+Bring your own runtime <strong>disables</strong> the default PHP Runtime in Windows Azure Web Sites, so be sure to upload your own <em>php.ini</em>. Mmm, Yeah, I'm going to have to go ahead and ask you to set <code>fastcgi.impersonate = 1</code> and <code>fastcgi.logging = 0</code>, too. Grrrreat.
 </div>
 <p>If an application you are attempting to run on Windows Azure Web Sites needs a specific version of PHP, you will need to bring your own runtime.</p>
 
 <p>In order to do this there are several steps involved:</p>
 
 <ol>
-<li>Download</li>
+<li>
+<p>Download the <abbr title='Non Thread Safe'>NTS</abbr> PHP runtime</p>
 
-<li>Configure</li>
+<ul>
+<li>Using <a href='#kuduexec'>KuduExec</a> + <code>curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip</code> + <code>unzip php.zip</code></li>
+
+<li>Using <a href='#kuduexec-web'>KuduExec (Web)</a> + <code>curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip</code> + <code>unzip php.zip</code></li>
+
+<li>From <a href='http://windows.php.net/downloads'>PHP for Windows downloads</a> page and upload to <code>/site/wwwroot/bin/php</code> via <abbr title='File Transfer Protocol'>FTP</abbr>.</li>
+</ul>
+</li>
+
+<li>
+<p>Configure an Handler Mapping via the Windows Azure Management Portal; or</p>
+
+<ul>
+<li>Login to the Windows Azure Management Portal</li>
+
+<li>Select your Web Site from the list</li>
+
+<li>Navigate to the <strong>CONFIGURE</strong> tab</li>
+
+<li>Scroll to the <strong>Handler Mappings</strong> section</li>
+
+<li>Flll the boxes as follows: <br /> <table class='table table-bordered'>
+<tr class='active'>
+<th>Extension</th>
+<th>Script Processor Path</th>
+<th>Additional Arguments (Optional)</th>
+</tr>
+<tr>
+<td><dfn title='All PHP files'>*.php</dfn></td>
+<td>D:\home\site\wwwroot\bin\php\php-cgi.exe</td>
+<td />
+</tr>
+</table></li>
+</ul>
+</li>
+
+<li>
+<p>Configure a Handler Mapping via the Windows Azure Cross Platform Tools; or</p>
+
+<p><code>azure site handler add &#39;*.php&#39; &#39;D:\home\site\wwwroot\bin\php\php-cgi.exe&#39;</code></p>
+</li>
+
+<li>
+<p>Configure a Handler Mapping via the Windows Azure PowerShell Cmdlets</p>
+<pre>
+$phpMapping = new-object Microsoft.WindowsAzure.Management.Utilities.Websites.Services.WebEntities.HandlerMapping
+$phpMapping.Extension = "*.php"
+$phpMapping.ScriptProcessor = "d:\home\site\wwwroot\bin\php\php-cgi.exe"
+Set-AzureWebSite -HandlerMappings $phpMapping -Name &lt;website-name&gt;
+</pre></li>
 </ol>
 
 <h3 id='default_php_extensions'>Default PHP Extensions</h3>
@@ -279,6 +336,33 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<li class='list-group-item is-disabled'>php_xsl.dll</li>
 </ul>
 <h3 id='php_specific_appsettings'>PHP Specific AppSettings</h3>
+<table class='table table-striped'>
+	<tr>
+		<th>Key</th>
+		<th>Value</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>PHP_EXTENSIONS</td>
+		<td>
+			<dl>
+				<dt>comma delimited list of paths to dynamic link libraries</dt>
+				<dd>bin\ext\php_mongo.dll,bin\ext\php_xdebug.dll</dd>
+			</dl>
+		</td>
+		<td>used for loading PHP extensions with the built in versions of PHP</td>
+	</tr>
+	<tr>
+		<td>PHP_ZENDEXTENSIONS</td>
+		<td>
+			<dl>
+				<dt>comma delimited list of paths to dynamic link libraries</dt>
+				<dd>bin\ext\php_xdebug.dll</dd>
+			</dl>
+		</td>
+		<td>used for loading zend extensions with the built in versions of PHP</td>
+	</tr>
+</table>
 			</section>
 			
 		
@@ -295,25 +379,25 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	
 	
 
+	<!--
+	
+	
+	
+-->
+	
+	
+	
+	
 	
 	
 	
 	
 
+	<!--
 	
 	
 	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-
+-->
 	
 	
 	
@@ -326,29 +410,37 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 <p>The Windows Azure cross platform command line tools enable the power of the <a href='https://manage.windowsazure.com'>Windows Azure Management Portal</a> at the tip of your fingers on <strong>Linux</strong>, <strong>OSX</strong> or <strong>Windows</strong>. This guide details the command line options for creating, configuring and scaling Windows Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
-<div class='panel-heading'>Get the Tools</div>
-	<h5>Binary</h5>
-	<p>
-		<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
-		<a class='btn btn-success' href='http://go.microsoft.com/fwlink/?linkid=253471&amp;clcid=0x409'>Mac Installer</a>
-	</p>
-	<h5>Command Line</h5>
-	<p>
-		<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
-		<code>npm install azure-cli -g</code>
-	</p>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>	
+		<h4>Binary</h4>
+		<p>
+			<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
+			<a class='btn btn-success' href='http://go.microsoft.com/fwlink/?linkid=253471&amp;clcid=0x409'>Mac Installer</a>
+		</p>
+		<h4>Command Line</h4>
+		<p>
+			<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
+			<code>npm install azure-cli -g</code>
+		</p>
+	</div>
 </div><div class='panel panel-primary'>
-<div class='panel-heading'>Getting Setup</div>
-<ol>
-	<li>Run <code>azure account download</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
-	<li>Run <code>azure account import &lt;path-to-publishsettings-file&gt;</code> to import your subscriptions to be available to the tools</li>
-	<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>azure account list</code> to identify which subscriptions were imported
-		<ul>
-			<li>If you have multiple subscriptions, run <code>azure account set &lt;subscription-name&gt;</code> to select the subscription to use</li>
-		</ul>
-	</li>
-<li>To remove all of your subscriptions from the tools, run <code>azure account clear</code></li>
-</ol>
+	<div class='panel-heading'>
+			<h3 class='panel-title'>Getting Setup</h3>
+	</div>
+	<div class='panel-body'>
+		<ol>
+			<li>Run <code>azure account download</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
+			<li>Run <code>azure account import &lt;path-to-publishsettings-file&gt;</code> to import your subscriptions to be available to the tools</li>
+			<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>azure account list</code> to identify which subscriptions were imported
+				<ul>
+					<li>If you have multiple subscriptions, run <code>azure account set &lt;subscription-name&gt;</code> to select the subscription to use</li>
+				</ul>
+			</li>
+			<li>To remove all of your subscriptions from the tools, run <code>azure account clear</code></li>
+		</ol>
+	</div>
 </div>
 <h2 id='general_web_site_commands'>General Web Site Commands</h2>
 
@@ -1540,11 +1632,11 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	
 	
 
+	<!--
 	
 	
 	
-	
-
+-->
 	
 	
 	
@@ -1559,19 +1651,25 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 <p>The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Windows Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
-<div class='panel-heading'>Get the Tools</div>
-	<p>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>
 		<a class='btn btn-success' href='http://go.microsoft.com/?linkid=9811175&amp;clcid=0x409'>Windows Installer</a>
-	</p>
+	</div>
 </div><div class='panel panel-primary'>
-<div class='panel-heading'>Getting Setup</div>
-<ol>
-	<li>Run <code>Get-AzurePublishSettingsFile</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
-	<li>Run <code>Import-AzurePublishSettingsFile &lt;path-to-publishsettings-file&gt;</code> to make your subscriptions available to the PowerShell command-line.</li>
-	<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>Get-AzureSubscription</code> to identify which subscriptions were imported.</li>
-	<li>Run <code>Select-AzureSubscription &lt;Name&gt;</code> to select the subscription to use</li>
-	<li>To remove all of your subscriptions from PowerShell, run <code>Get-AzureSubscription | Remove-AzureSubscription</code></li>
-</ol>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Getting Setup</h3>
+	</div>
+	<div class='panel-body'>
+		<ol>
+			<li>Run <code>Get-AzurePublishSettingsFile</code> to download a <em>.publishsettings</em> file which lists your subscriptions</li>
+			<li>Run <code>Import-AzurePublishSettingsFile &lt;path-to-publishsettings-file&gt;</code> to make your subscriptions available to the PowerShell command-line.</li>
+			<li><em>.publishsettings</em> files may contain multiple subscriptions, run <code>Get-AzureSubscription</code> to identify which subscriptions were imported.</li>
+			<li>Run <code>Select-AzureSubscription &lt;Name&gt;</code> to select the subscription to use</li>
+			<li>To remove all of your subscriptions from PowerShell, run <code>Get-AzureSubscription | Remove-AzureSubscription</code></li>
+		</ol>
+	</div>
 </div>
 <h2 id='web_site_management'>Web Site Management</h2>
 
@@ -2237,7 +2335,8 @@ pushed to the website in Windows Azure.</td>
 	<script type="text/javascript">
 		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-
+	</script>
+	<script type="text/javascript">
 		try {
 		  var pageTracker = _gat._getTracker("UA-11941712-5");
 		  pageTracker._trackPageview();
