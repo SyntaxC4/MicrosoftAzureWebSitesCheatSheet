@@ -8,6 +8,8 @@ So, you fancy programming PHP do ya? Well, here are some tips specifically for y
 
 ### PHP Runtimes
 
+Windows Azure Web Sites has a selection of default installed PHP Runtimes, however, the option is still available to bring your own runtime if a specific version of PHP is required.
+
 {% include html-php-runtimes.md %}
 
 #### Bring your own Runtime
@@ -16,14 +18,12 @@ So, you fancy programming PHP do ya? Well, here are some tips specifically for y
 
 {% include html-alert-php-byo-phpini.md %}
 
-If an application you are attempting to run on Windows Azure Web Sites needs a specific version of PHP, you will need to bring your own runtime.
-
-In order to do this there are several steps involved:
+In order to do this there are a few steps involved:
 
 1. Download the <abbr title="Non Thread Safe">NTS</abbr> PHP runtime
-	* Using [KuduExec](#kuduexec) + ```curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip``` + ```unzip php.zip```
-	* Using [KuduExec (Web)](#kuduexec-web) + ```curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip``` + ```unzip php.zip```
 	* From  [PHP for Windows downloads](http://windows.php.net/downloads) page and upload to ```/site/wwwroot/bin/php``` via <abbr title="File Transfer Protocol">FTP</abbr>.
+	* Using [KuduExec](#kuduexec) or [KuduExec (Web)](#kuduexec-web)
+			{% include html-kuduexec-install-php.md %}
 	 
 2. Configure an Handler Mapping via the Windows Azure Management Portal; or
 	* Login to the Windows Azure Management Portal 
@@ -33,19 +33,18 @@ In order to do this there are several steps involved:
 	* Flll the boxes as follows:
 		{% include html-php-http-handler-mapping.md %}
 		
-3. Configure a Handler Mapping via the Windows Azure Cross Platform Tools; or
+3. Configure a Handler Mapping via the command line:
 
-	```azure site handler add '*.php' 'D:\home\site\wwwroot\bin\php\php-cgi.exe'```
+	#### Cross Platform Command Line Tools
+
+	<pre>azure site handler add '*.php' 'D:\home\site\wwwroot\bin\php\php-cgi.exe'</pre>
 	
-4. Configure a Handler Mapping via the Windows Azure PowerShell Cmdlets
+	#### PowerShell Cmdlets
 	
 	<pre>
-	$phpMapping = new-object Microsoft.WindowsAzure.Management.Utilities.Websites.Services.WebEntities.HandlerMapping
-	$phpMapping.Extension = "*.php"
-	$phpMapping.ScriptProcessor = "d:\home\site\wwwroot\bin\php\php-cgi.exe"
+	$phpMapping = (@{Extension="*.php";ScriptProcessor="d:\home\site\wwwroot\bin\php\php-cgi.exe"}) 
 	Set-AzureWebSite -HandlerMappings $phpMapping -Name &lt;website-name&gt;
 	</pre>
-
 
 ### Default PHP Extensions
 
@@ -55,6 +54,8 @@ In order to do this there are several steps involved:
 
 {% include html-php-extensions.md %}
 
-### PHP Specific AppSettings
+### Enabling PHP Extensions {: id="enable-php-extensions"}
+
+Extensions can be enabled by adding **App Settings** to your Web Site with the following reserved app setting keys.
 
 {% include html-php-appsettings.md %}

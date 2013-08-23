@@ -1,4 +1,4 @@
-<ul class="list-group extensions">
+<ul class="list-group ul-grid">
 	<li class="list-group-item is-disabled">php_bz2.dll</li>
 	<li class="list-group-item is-enabled">php_com_dotnet.dll</li>
 	<li class="list-group-item is-enabled">php_curl.dll</li>
