@@ -1,56 +1,27 @@
-<table class="table table-bordered">
-	<tr>
-		<th></th>
-		<th>HTTP Server</th>
-		<th>Protocols</th>
-		<th>Language Support</th>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="is-supported">ASP</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="is-supported">ASP.NET</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="is-missing">ColdFusion</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="is-missing">Java</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td class="is-supported">Node.js</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td class="is-supported">SNI + IP SSL</td>
-		<td></td>
-		<td class="is-supported">PHP</td>
-	</tr>
-		<tr>
-		<td></td>
-		<td class="is-supported">URL Rewriting</td>
-		<td></td>
-		<td class="is-supported">Python</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td class="is-missing">Web Sockets</td>
-		<td></td>
-		<td class="is-missing">Ruby</td>
-	</tr>
-</table>
+<ul class="list-group ul-grid">
+	<li class="list-group-item is-enabled">10 Free Sites!</li>
+	<li class="list-group-item is-enabled">Add-ons</li>
+	<li class="list-group-item is-enabled">Application Installer</li>
+	<li class="list-group-item is-enabled">ASP</li>
+	<li class="list-group-item is-enabled">ASP.NET</li>
+	<li class="list-group-item is-enabled">Cache Cluster <span class="label label-warning">New</span></li>
+	<li class="list-group-item is-enabled">Command Line Access</li>
+	<li class="list-group-item is-enabled">Custom Domains</li>
+	<li class="list-group-item is-enabled">Framework Installer</li>
+	<li class="list-group-item is-disabled">HTTP Compression</li>
+	<li class="list-group-item is-enabled">IP Restriction <span class="label label-warning">New</span></li>	
+	<li class="list-group-item is-enabled">IP SSL</li>
+	<li class="list-group-item is-disabled">Linux</li>
+	<li class="list-group-item is-enabled">MySQL</li>
+	<li class="list-group-item is-enabled">MS SQL Server</li>
+	<li class="list-group-item is-enabled">Node.js</li>
+	<li class="list-group-item is-enabled">PHP</li>
+	<li class="list-group-item is-enabled">Python</li>
+	<li class="list-group-item is-disabled">Remote Desktop Access</li>
+	<li class="list-group-item is-disabled">Reverse Proxy</li>
+	<li class="list-group-item is-enabled">Site Specific Configuration</li>
+	<li class="list-group-item is-enabled">SNI SSL</li>
+	<li class="list-group-item is-enabled">URL Rewrite</li>
+	<li class="list-group-item is-disabled">Web Sockets</li>
+	<li class="list-group-item is-enabled">Windows/IIS</li>
+</ul>
