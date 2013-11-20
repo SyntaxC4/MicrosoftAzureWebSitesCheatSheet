@@ -4,8 +4,8 @@
 		<th>WinCache</th>
 	</tr>
 	<tr>
-		<td class="success">5.3.19</td>
-		<td rowspan="2">1.3.4.0</td>
+		<td>5.3.19</td>
+		<td class="success" rowspan="2">1.3.4.0</td>
 	</tr>
 	<tr>
 		<td class="success">5.4.9</td>
