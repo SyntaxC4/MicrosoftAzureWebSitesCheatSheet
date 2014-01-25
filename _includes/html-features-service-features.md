@@ -22,6 +22,6 @@
 	<li class="list-group-item is-enabled">Site Specific Configuration</li>
 	<li class="list-group-item is-enabled">SNI SSL</li>
 	<li class="list-group-item is-enabled">URL Rewrite</li>
-	<li class="list-group-item is-disabled">Web Sockets</li>
+	<li class="list-group-item is-enabled">Web Sockets</li>
 	<li class="list-group-item is-enabled">Windows/IIS</li>
 </ul>
