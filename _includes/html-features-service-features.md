@@ -8,7 +8,7 @@
 	<li class="list-group-item is-enabled">Command Line Access</li>
 	<li class="list-group-item is-enabled">Custom Domains</li>
 	<li class="list-group-item is-enabled">Framework Installer</li>
-	<li class="list-group-item is-disabled">HTTP Compression</li>
+	<li class="list-group-item is-enabled">HTTP Compression</li>
 	<li class="list-group-item is-enabled">IP Restriction <span class="label label-warning">New</span></li>	
 	<li class="list-group-item is-enabled">IP SSL</li>
 	<li class="list-group-item is-disabled">Linux</li>
