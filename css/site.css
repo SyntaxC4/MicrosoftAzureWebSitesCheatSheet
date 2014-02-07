@@ -3,7 +3,7 @@
 */
 
 body { padding-top: 70px; }
-section { margin-top: 20px; }
+section { margin-top: 20px; width: 100%; }
 
 #php { background-color: #C6C6E2; }
 
