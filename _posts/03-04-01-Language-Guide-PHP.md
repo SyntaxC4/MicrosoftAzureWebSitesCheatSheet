@@ -2,7 +2,7 @@
 categories: [language, php]
 ---
 
-##PHP
+## PHP
 
 So, you fancy programming PHP do ya? Well, here are some tips specifically for you.
 
