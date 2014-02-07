@@ -23,8 +23,16 @@ In order to do this there are a few steps involved:
 1. Download the <abbr title="Non Thread Safe">NTS</abbr> PHP runtime
 	* From  [PHP for Windows downloads](http://windows.php.net/downloads) page and upload to ```/site/wwwroot/bin/php``` via <abbr title="File Transfer Protocol">FTP</abbr>.
 	* Using [KuduExec](#kuduexec) or [KuduExec (Web)](#kuduexec-web)
-			{% include html-kuduexec-install-php.md %}
-	 
+			<pre>
+			cd site\wwwroot
+			mkdir bin
+			cd bin
+			mkdir php
+			curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip
+			unzip php.zip
+			rm php.zip
+			</pre>
+
 2. Configure an Handler Mapping via the Windows Azure Management Portal; or
 	* Login to the Windows Azure Management Portal 
 	* Select your Web Site from the list
@@ -49,9 +57,7 @@ In order to do this there are a few steps involved:
 ### Default PHP Extensions
 
 {% include html-alert-enable-php-extensions.md %}
-
 {% include html-alert-enable-default-php-extensions.md %}
-
 {% include html-php-extensions.md %}
 
 ### Enabling PHP Extensions {: id="enable-php-extensions"}

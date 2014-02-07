@@ -1,5 +1,5 @@
 ---
-category: features
+categories: [features]
 ---
 
 # Features
