@@ -6,10 +6,10 @@
 	<li class="list-group-item is-enabled">ASP.NET</li>
 	<li class="list-group-item is-enabled">Cache Cluster <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">Command Line Access</li>
-	<li class="list-group-item is-enabled">Cron Jobs</li>
+	<li class="list-group-item is-enabled">Cron Jobs <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">Custom Domains</li>
 	<li class="list-group-item is-enabled">Framework Installer</li>
-	<li class="list-group-item is-enabled">HTTP Compression</li>
+	<li class="list-group-item is-enabled">HTTP Compression <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">IP Restriction <span class="label label-warning">New</span></li>	
 	<li class="list-group-item is-enabled">IP SSL</li>
 	<li class="list-group-item is-disabled">Java</li>
@@ -25,6 +25,6 @@
 	<li class="list-group-item is-enabled">Site Specific Configuration</li>
 	<li class="list-group-item is-enabled">SNI SSL</li>
 	<li class="list-group-item is-enabled">URL Rewrite</li>
-	<li class="list-group-item is-enabled">Web Sockets</li>
+	<li class="list-group-item is-enabled">Web Sockets <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">Windows/IIS</li>
 </ul>
