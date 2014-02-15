@@ -113,9 +113,9 @@
 </ul>
 		</section>
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -127,13 +127,119 @@
 
 	
 	
-	<!--
+
 	
 		<section id="deployment">
-			
+			<h1 id='deployment'>Deployment</h1>
+
+<p>There are a number of ways to deploy your applications to Windows Azure Web Sites, there are also a number of ways to tie into the deployment process to aid you in Automation, Configuration, or Diagnosing issues with your deployment.</p>
+
+<h2 id='supported_deployment_types'>Supported Deployment Types</h2>
+<ul class='list-group ul-grid'>
+	<li class='list-group-item is-enabled'><a href='http://www.codeplex.com'>CodePlex</a></li>
+	<li class='list-group-item is-enabled'><a href='http://www.bitbucket.com'>Bit Bucket</a></li>
+	<li class='list-group-item is-enabled'>FTP</li>
+	<li class='list-group-item is-enabled'>FTPS</li>
+	<li class='list-group-item is-enabled'><a href='http://www.git-scm.com'>Git</a></li>
+	<li class='list-group-item is-enabled'><a href='http://www.github.com'>GitHub</a></li>
+	<li class='list-group-item is-enabled'><a href='http://mercurial.selenic.com/'>Mercurial</a></li>
+	<li class='list-group-item is-disabled'><a href='http://subversion.apache.org/'>SVN</a></li>
+	<li class='list-group-item is-enabled'><a href='http://www.visualstudio.com'>Visual Studio</a></li>
+	<li class='list-group-item is-enabled'><a href='http://www.visualstudio.com/products/visual-studio-online-overview-vs'>Visual Studio Online</a></li>
+	<li class='list-group-item is-enabled'><a href='http://www.iis.net/downloads/microsoft/web-deploy'>Web Deploy</a></li>
+</ul>
+<h2 id='deployment_tools'>Deployment Tools</h2>
+
+<h3 id='kudu'>Kudu</h3>
+<div class='panel panel-primary visible-md visible-lg'>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Install Kudu</h3>
+	</div>
+	<div class='panel-body'>
+		<h4>Windows Server</h4>
+		<p>That's right, Kudu isn't exclusively for Windows Azure. Read the docs on <a href='https://github.com/projectkudu/kudu/wiki/Deploying-to-a-server'>How to Deploy Kudu on Windows Server 2012</a>.</p>
+		<h4>Self-Host on Windows Azure</h4>
+		<p>Have you forked kudu for your own purposes? Here's how you can <a href='https://github.com/projectkudu/kudu/wiki/Deploy-locally-built-private-kudu-to-azure'>deploy your custom fork of Kudu to Azure</a></p>
+	</div>
+</div>
+<h3 id='kuduexec'>KuduExec</h3>
+<div class='panel panel-primary visible-md visible-lg'>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>
+		<h4>Command Line</h4>
+		<p>
+			<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
+			<code>npm install kuduexec -g</code>
+		</p>
+	</div>
+</div><div class='alert alert-danger'>
+Windows Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
+</div>
+<p><strong>KuduExec</strong> enables command-line access to a Windows Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) url of the website as the first parameter.</p>
+<pre>
+kuduexec https://[site-name].scm.azurewebsites.net
+Username: [deployment-user]
+Password: [deployment-pass]
+</pre>
+<h3 id='kudusync'>KuduSync</h3>
+<div class='panel panel-primary visible-md visible-lg'>
+	<div class='panel-heading'>
+		<h3 class='panel-title'>Get the Tools</h3>
+	</div>
+	<div class='panel-body'>
+		<h4>Command Line</h4>
+		<p>
+			<div class='alert alert-info'><strong>Prerequisites</strong>: Node.js</div>
+			<code>npm install kudusync -g</code>
+		</p>
+	</div>
+</div>
+<p>KuduSync is a tool for syncing files for deployment, will only copy changed files and delete files that doesn&#8217;t exists in the destination but only if they were part of the previous deployment.</p>
+<div class='alert alert-info'>
+KuduSync is responsible for file synchronization during deployment. It is called at the end of the default deployment process (you can <a href='#custom-deployment-script'>customize the deployment script</a>) to move files between the <code>%DEPLOYMENT_SOURCE%</code> folder and the <code>%DEPLOYMENT_TARGET%</code>.
+</div><table class='table table-striped cli cmd'>
+<caption><bdi>waws-dev$ </bdi><kbd>kudusync [options]</kbd></caption>
+<tr>
+	<th class='w20'>command</th>
+	<th class='w60'>options</th>
+	<th>description</th>
+</tr>
+<tr>
+	<td />
+	<td>
+		<dl class='dl-horizontal'>
+			<dt>-h, --help</dt>
+			<dd>output usage information</dd>
+			<dt>-V, --version</dt>
+			<dd>output the version number</dd>
+			<dt>-f, --fromDir &lt;dir path&gt;</dt>
+			<dd>Source directory to sync</dd>
+			<dt>-t, --toDir &lt;dir path&gt;</dt>
+			<dd>Destination directory to sync</dd>
+			<dt>-n, --nextManifest &lt;manifest file path&gt;</dt>
+			<dd>Next manifest file path</dd>
+			<dt>-p, --previousManifest [manifest file path]</dt>
+			<dd>Previous manifest file path</dd>
+			<dt>-i, --ignore [patterns]</dt>
+			<dd>List of files/directories to ignore</dd>
+			<dt>-q, --quiet</dt>
+			<dd>No logging</dd>
+			<dt>-v, --verbose [maxLines]</dt>
+			<dd>Verbose logging with maximum number of output lines</dd>
+			<dt>-w, --whatIf</dt>
+			<dd>only log without actual copy/remove of files</dd>
+			<dt>--perf</dt>
+			<dd>Print out the time it took to complete KuduSync operation</dd>
+		</dl>
+	</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
 		</section>
 	
--->
+
 	
 	
 	
@@ -145,9 +251,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -159,9 +265,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -173,9 +279,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -187,9 +293,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -201,9 +307,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -215,9 +321,9 @@
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 		<section id="language-guide">
@@ -410,9 +516,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -424,9 +530,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
@@ -1663,9 +1769,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 	
 	
-	<!--
+
 	
--->
+
 	
 	
 	
