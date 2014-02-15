@@ -35,12 +35,13 @@ table.cmd caption { background-color: #000; color: #00ff00;}
 
 dl.dl-horizontal dt { text-align: left; }
 
-li.is-disabled { color: #ccc; background-color: #f9f9f9 !important; }
-li.is-enabled { color: #468847; background-color: #dff0d8 !important; }
-
 ul.ul-grid { width: 100%; }
 ul.ul-grid li { width: 24%; display: inline-block; text-align: center; margin-bottom: 5px; overflow:hidden; text-overflow:ellipsis; white-space: nowrap; }
- 
+ul.ul-grid a, ul.ul-grid a:link, ul.ul-grid a:visited, ul.ul-grid a:hover{ text-decoration: none;}
+
+li.is-disabled, li.is-disabled a { color: #ccc; background-color: #f9f9f9 !important; }
+li.is-enabled, li.is-enabled a { color: #468847; background-color: #dff0d8 !important; }
+
 ol ul { list-style-type: square;}
  
 /*
