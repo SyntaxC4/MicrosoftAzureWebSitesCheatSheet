@@ -162,6 +162,34 @@
 		<p>Have you forked kudu for your own purposes? Here's how you can <a href='https://github.com/projectkudu/kudu/wiki/Deploy-locally-built-private-kudu-to-azure'>deploy your custom fork of Kudu to Azure</a></p>
 	</div>
 </div>
+<p>Kudu is the central nervous system of a Windows Azure Web Site; it handles the Git integration to a Web Site as well as provides an API endpoint for programmatic access to app settings, deployment information, files, active processes, runtime versions, source control information, web hooks and web jobs. Kudu, itself, is a Site Extension which is provided with ever Web Site, you can access it by using the Source Control Management entry point <strong>https://&#60;your-website-name&#62;.scm.azurewebsites.net</strong></p>
+
+<h4 id='kudu_dashboard'>Kudu Dash(board)</h4>
+
+<p>The Kudu dashboard is the first page you will encounter on the SCM entry point, it displays information pertaining to your Web Site such as the build number of Kudu which is running, tge current uptime of your site (this could display a value as low as a couple of seconds as your site may have been deallocated due to inactivity, unless the site has Always-On enabled).</p>
+
+<h5 id='environment'>Environment</h5>
+
+<p>The Environment tab in Kudu Dash shows some very valuable information including System Information, App Settings, Connection Strings, Environment Variables, PATH, HTTP Headers and Server Variables.</p>
+
+<h5 id='debug_console'>Debug Console</h5>
+
+<p>The Debug Console gives file explorer and graphical KuduExec experience which enables you to run command line tools against the Web Site.</p>
+
+<h5 id='diagnostic_dump'>Diagnostic Dump</h5>
+
+<p>Diagnostic Dump provides a zip file of all of the Diagnostic Data which is enabled under the Application Diagnostics header in the CONFIGURE tab of the Web Site.</p>
+
+<h5 id='log_stream'>Log Stream</h5>
+<div class='alert alert-danger'>
+Web Server Logging must be enabled for the Windows Azure Web Site or this page will fail to load.
+</div>
+<p>Log Stream long-polling process which provides logging data from your Web Site if Web Server Logging is enabled under the Site Diagnostics header in the CONFIGURE tab of the Web Site.</p>
+
+<h5 id='web_hooks'>Web Hooks</h5>
+
+<p>Allows URLs to be registered as Web Hooks. Informtion will be posted to the URL when events occur.</p>
+
 <h3 id='kuduexec'>KuduExec</h3>
 <div class='panel panel-primary visible-md visible-lg'>
 	<div class='panel-heading'>
@@ -177,7 +205,7 @@
 </div><div class='alert alert-danger'>
 Windows Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
 </div>
-<p><strong>KuduExec</strong> enables command-line access to a Windows Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) url of the website as the first parameter.</p>
+<p>KuduExec enables command-line access to a Windows Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) endpoint of the website as the first parameter.</p>
 <pre>
 kuduexec https://[site-name].scm.azurewebsites.net
 Username: [deployment-user]
