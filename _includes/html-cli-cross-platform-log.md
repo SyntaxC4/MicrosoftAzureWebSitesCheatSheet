@@ -12,6 +12,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>-o, --output &lt;path&gt;</dt><dd>output path, default is local folder</dd>
 			</dl>
@@ -25,6 +26,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>-p, --path &lt;path&gt;</dt><dd>the log path under LogFiles folder</dd>
 				<dt>-f, --filter &lt;filter&gt;</dt><dd>filter matching line</dd>
@@ -34,12 +36,13 @@
 		<td>live diagnostic log</td>
 	</tr>
 	<tr>
-		<td>set {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>set {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>-a, --application</dt><dd>Use this flag to enable application diagnostics</dd>
 				<dt>-A, --disable-application</dt><dd>Use this flag to disable application diagnostics</dd>

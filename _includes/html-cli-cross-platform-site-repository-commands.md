@@ -12,6 +12,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 			</dl>
 		</td>
@@ -24,6 +25,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				{% include command-option-quiet.md %}
 			</dl>
@@ -31,12 +33,13 @@
 		<td>delete the remote git repository for the web site</td>
 	</tr>
 	<tr>
-		<td>sync {% include command-argument-name.md %} {% include command-argument-options.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>sync {% include command-argument-name.md %} {% include command-argument-options.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 			</dl>
 		</td>

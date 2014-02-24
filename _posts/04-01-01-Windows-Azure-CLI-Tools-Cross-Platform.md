@@ -2,7 +2,7 @@
 categories: [command-line, cli]
 ---
 
-# Windows Azure CLI Tools <small>(Cross Platform 0.7.0)</small>
+# Windows Azure CLI Tools <small>(Cross Platform 0.7.5)</small>
 
 The Windows Azure cross platform command line tools enable the power of the [Windows Azure Management Portal][WA-Portal] at the tip of your fingers on **Linux**, **OSX** or **Windows**. This guide details the command line options for creating, configuring and scaling Windows Azure Web Sites.
 
@@ -17,8 +17,6 @@ General commands for Windows Azure Web Sites include the ability to **create** o
 {% include html-cli-cross-platform-site-commands.md %}
 
 ## Web Site Deployment Commands
-
-
 
 {% include html-cli-cross-platform-site-deployment-commands.md %}
 
@@ -59,6 +57,10 @@ General commands for Windows Azure Web Sites include the ability to **create** o
 ### HTTP Handler Configuration
 
 {% include html-cli-cross-platform-handler.md %}
+
+### Web Job Configuration
+
+{% include html-cli-cross-platform-site-job-commands.md %}
 
 ### Logging Configuration
 

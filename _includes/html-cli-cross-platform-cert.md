@@ -6,7 +6,7 @@
 		<th>description</th>
 	</tr>
 	<tr>
-		<td>list {% include command-argument-options.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>list {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
@@ -18,7 +18,7 @@
 		<td>Show your site certificates</td>
 	</tr>
 	<tr>
-		<td>add {% include command-argument-options.md %} &lt;certificate-path&gt; {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>add {% include command-argument-options.md %} &lt;certificate-path&gt; {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
@@ -31,7 +31,7 @@
 		<td>Adds a site certificate in pfx format</td>
 	</tr>
 	<tr>
-		<td>delete {% include command-argument-options.md %} {% include command-argument-thumbprint.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>delete {% include command-argument-options.md %} {% include command-argument-thumbprint.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
@@ -44,7 +44,7 @@
 		<td>Deletes a site certificate</td>
 	</tr>
 	<tr>
-		<td>show {% include command-argument-options.md %} {% include command-argument-thumbprint.md %} {% include command-argument-name.md %}<p><span class="label label-warning">new</span></p></td>
+		<td>show {% include command-argument-options.md %} {% include command-argument-thumbprint.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
