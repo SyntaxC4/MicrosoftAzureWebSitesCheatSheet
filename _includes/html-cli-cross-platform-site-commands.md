@@ -101,6 +101,19 @@
 		<td>stop the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
+		<td>swap {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
+		<td>
+			<dl class="dl-horizontal">
+				{% include command-option-help.md %}
+				{% include command-option-subscription.md %}
+				{% include command-option-verbose.md %}
+				{% include command-option-json.md %}
+				{% include command-option-quiet.md %}
+			</dl>
+		</td>
+		<td>swaps the staging site into production</td>
+	</tr>
+	<tr>
 		<td>restart {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
 		<td>
 			<dl class="dl-horizontal">
