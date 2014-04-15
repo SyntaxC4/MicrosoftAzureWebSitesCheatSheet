@@ -2,11 +2,7 @@
 categories: [command-line, cli]
 ---
 
-<<<<<<< HEAD:_posts/04-01-01-Microsoft-Azure-CLI-Tools-Cross-Platform.md
 # Microsoft Azure CLI Tools <small>(Cross Platform 0.7.0)</small>
-=======
-# Windows Azure CLI Tools <small>(Cross Platform 0.7.5)</small>
->>>>>>> e4c362be6e20c05a888b04ae02e524285806d24a:_posts/04-01-01-Windows-Azure-CLI-Tools-Cross-Platform.md
 
 The Microsoft Azure cross platform command line tools enable the power of the [Microsoft Azure Management Portal][WA-Portal] at the tip of your fingers on **Linux**, **OSX** or **Windows**. This guide details the command line options for creating, configuring and scaling Microsoft Azure Web Sites.
 

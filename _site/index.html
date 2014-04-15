@@ -69,11 +69,11 @@
 <section id="home">
 	<h1 id='howdy_cloud_adventurer'>Howdy, Cloud Adventurer!</h1>
 
-<p>You&#8217;ve stumbled across the Windows Azure Web Sites Cheat Sheet &#8211; The quickest reference for getting to know <a href='http://www.windowsazure.com/en-us/home/scenarios/web-sites'>Windows Azure Web Sites</a> on the web. If you&#8217;re looking for some <a href='http://www.windowsazure.com/en-us/develop/overview'>tutorials</a> on how to develop solutions on Windows Azure Web Sites check out the <a href='http://www.windowsazure.com'>Windows Azure</a> product site or the <a href='http://www.windowsazure.com/en-us/develop/net/other-resources/training-kit'>Windows Azure Training Kit</a>.</p>
+<p>You&#8217;ve stumbled across the Microsoft Azure Web Sites Cheat Sheet &#8211; The quickest reference for getting to know <a href='http://www.windowsazure.com/en-us/home/scenarios/web-sites'>Microsoft Azure Web Sites</a> on the web. If you&#8217;re looking for some <a href='http://www.windowsazure.com/en-us/develop/overview'>tutorials</a> on how to develop solutions on Microsoft Azure Web Sites check out the <a href='http://www.windowsazure.com'>Microsoft Azure</a> product site or the <a href='http://www.windowsazure.com/en-us/develop/net/other-resources/training-kit'>Microsoft Azure Training Kit</a>.</p>
 
-<p>Browse around this one page reference for information on <strong>command-line tools</strong><!--, **language references**, lesser known **utilities**--> for managing your Windows Azure Web Sites. Take a quick look at the <strong>features</strong> that are offered on Windows Azure Web Sites then start exploring the wonderful world of Windows Azure!</p>
+<p>Browse around this one page reference for information on <strong>command-line tools</strong><!--, **language references**, lesser known **utilities**--> for managing your Microsoft Azure Web Sites. Take a quick look at the <strong>features</strong> that are offered on Microsoft Azure Web Sites then start exploring the wonderful world of Microsoft Azure!</p>
 
-<p><a href='http://www.windowsazure.com/en-us/pricing/free-trial/?WT.mc_id=ACBCB6EE5'>Try Windows Azure Web Sites today for free!</a></p>
+<p><a href='http://www.windowsazure.com/en-us/pricing/free-trial/?WT.mc_id=ACBCB6EE5'>Try Microsoft Azure Web Sites today for free!</a></p>
 </section>
 
 
@@ -132,7 +132,7 @@
 		<section id="deployment">
 			<h1 id='deployment'>Deployment</h1>
 
-<p>There are a number of ways to deploy your applications to Windows Azure Web Sites, there are also a number of ways to tie into the deployment process to aid you in Automation, Configuration, or Diagnosing issues with your deployment.</p>
+<p>There are a number of ways to deploy your applications to Microsoft Azure Web Sites, there are also a number of ways to tie into the deployment process to aid you in Automation, Configuration, or Diagnosing issues with your deployment.</p>
 
 <h2 id='supported_deployment_types'>Supported Deployment Types</h2>
 <ul class='list-group ul-grid'>
@@ -157,12 +157,12 @@
 	</div>
 	<div class='panel-body'>
 		<h4>Windows Server</h4>
-		<p>That's right, Kudu isn't exclusively for Windows Azure. Read the docs on <a href='https://github.com/projectkudu/kudu/wiki/Deploying-to-a-server'>How to Deploy Kudu on Windows Server 2012</a>.</p>
-		<h4>Self-Host on Windows Azure</h4>
+		<p>That's right, Kudu isn't exclusively for Microsoft Azure. Read the docs on <a href='https://github.com/projectkudu/kudu/wiki/Deploying-to-a-server'>How to Deploy Kudu on Windows Server 2012</a>.</p>
+		<h4>Self-Host on Microsoft Azure</h4>
 		<p>Have you forked kudu for your own purposes? Here's how you can <a href='https://github.com/projectkudu/kudu/wiki/Deploy-locally-built-private-kudu-to-azure'>deploy your custom fork of Kudu to Azure</a></p>
 	</div>
 </div>
-<p>Kudu is the central nervous system of a Windows Azure Web Site; it handles the Git integration to a Web Site as well as provides an API endpoint for programmatic access to app settings, deployment information, files, active processes, runtime versions, source control information, web hooks and web jobs. Kudu, itself, is a Site Extension which is provided with ever Web Site, you can access it by using the Source Control Management entry point <strong>https://&#60;your-website-name&#62;.scm.azurewebsites.net</strong></p>
+<p>Kudu is the central nervous system of a Microsoft Azure Web Site; it handles the Git integration to a Web Site as well as provides an API endpoint for programmatic access to app settings, deployment information, files, active processes, runtime versions, source control information, web hooks and web jobs. Kudu, itself, is a Site Extension which is provided with ever Web Site, you can access it by using the Source Control Management entry point <strong>https://&#60;your-website-name&#62;.scm.azurewebsites.net</strong></p>
 
 <h4 id='kudu_dashboard'>Kudu Dash(board)</h4>
 
@@ -182,7 +182,7 @@
 
 <h5 id='log_stream'>Log Stream</h5>
 <div class='alert alert-danger'>
-Web Server Logging must be enabled for the Windows Azure Web Site or this page will fail to load.
+Web Server Logging must be enabled for the Microsoft Azure Web Site or this page will fail to load.
 </div>
 <p>Log Stream long-polling process which provides logging data from your Web Site if Web Server Logging is enabled under the Site Diagnostics header in the CONFIGURE tab of the Web Site.</p>
 
@@ -205,9 +205,9 @@ Web Server Logging must be enabled for the Windows Azure Web Site or this page w
 		</p>
 	</div>
 </div><div class='alert alert-danger'>
-Windows Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
+Microsoft Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
 </div>
-<p>KuduExec enables command-line access to a Windows Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) endpoint of the website as the first parameter.</p>
+<p>KuduExec enables command-line access to a Microsoft Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) endpoint of the website as the first parameter.</p>
 <pre>
 kuduexec https://[site-name].scm.azurewebsites.net
 Username: [deployment-user]
@@ -230,7 +230,7 @@ Password: [deployment-pass]
 <div class='alert alert-info'>
 KuduSync is responsible for file synchronization during deployment. It is called at the end of the default deployment process (you can <a href='#custom-deployment-script'>customize the deployment script</a>) to move files between the <code>%DEPLOYMENT_SOURCE%</code> folder and the <code>%DEPLOYMENT_TARGET%</code>.
 </div><table class='table table-striped cli cmd'>
-<caption><bdi>waws-dev$ </bdi><kbd>kudusync [options]</kbd></caption>
+<caption><bdi>maws-dev$ </bdi><kbd>kudusync [options]</kbd></caption>
 <tr>
 	<th class='w20'>command</th>
 	<th class='w60'>options</th>
@@ -371,7 +371,7 @@ KuduSync is responsible for file synchronization during deployment. It is called
 
 <h3 id='php_runtimes'>PHP Runtimes</h3>
 
-<p>Windows Azure Web Sites has a selection of default installed PHP Runtimes, however, the option is still available to bring your own runtime if a specific version of PHP is required.</p>
+<p>Microsoft Azure Web Sites has a selection of default installed PHP Runtimes, however, the option is still available to bring your own runtime if a specific version of PHP is required.</p>
 <table class='table table-bordered' style='width: 50%'>
 	<tr class='active'>
 		<th>PHP</th>
@@ -393,7 +393,7 @@ KuduSync is responsible for file synchronization during deployment. It is called
 <div class='alert alert-danger'>
 <strong>Warning!</strong> Bring your own Runtime is available to enable you to bring a specific version of PHP to run your Web Application. This option is enabled for <strong>Advanced Users only</strong>. 
 </div><div class='alert alert-info'>
-Bring your own runtime <strong>disables</strong> the default PHP Runtime in Windows Azure Web Sites, so be sure to upload your own <em>php.ini</em>. Mmm, Yeah, I'm going to have to go ahead and ask you to set <code>fastcgi.impersonate = 1</code> and <code>fastcgi.logging = 0</code>, too. Grrrreat.
+Bring your own runtime <strong>disables</strong> the default PHP Runtime in Microsoft Azure Web Sites, so be sure to upload your own <em>php.ini</em>. Mmm, Yeah, I'm going to have to go ahead and ask you to set <code>fastcgi.impersonate = 1</code> and <code>fastcgi.logging = 0</code>, too. Grrrreat.
 </div>
 <p>In order to do this there are a few steps involved:</p>
 
@@ -417,10 +417,10 @@ Bring your own runtime <strong>disables</strong> the default PHP Runtime in Wind
 </li>
 
 <li>
-<p>Configure an Handler Mapping via the Windows Azure Management Portal; or</p>
+<p>Configure an Handler Mapping via the Microsoft Azure Management Portal; or</p>
 
 <ul>
-<li>Login to the Windows Azure Management Portal</li>
+<li>Login to the Microsoft Azure Management Portal</li>
 
 <li>Select your Web Site from the list</li>
 
@@ -457,9 +457,9 @@ Set-AzureWebSite -HandlerMappings $phpMapping -Name &lt;website-name&gt;
 
 <h3 id='default_php_extensions'>Default PHP Extensions</h3>
 <div class='alert alert-info'>
-To enable extensions in Windows Azure Web Sites follow the directions under the <a class='alert-link' href='#enable-php-extensions'>Enable PHP Extensions</a> section.
+To enable extensions in Microsoft Azure Web Sites follow the directions under the <a class='alert-link' href='#enable-php-extensions'>Enable PHP Extensions</a> section.
 </div><div class='alert alert-danger'>
-If you need to enable default PHP extensions that are not highlighted below, you must upload them to your Windows Azure Web Site then enable as instructed in <a class='alert-link' href='#enable-php-extensions'>Enable PHP Extensions</a>. Loading default extensions in this way is required as extensions cannot be dynamically loaded in the <a class='alert-link' href='http://php.net/manual/en/configuration.file.per-user.php'>.user.ini</a> file.
+If you need to enable default PHP extensions that are not highlighted below, you must upload them to your Microsoft Azure Web Site then enable as instructed in <a class='alert-link' href='#enable-php-extensions'>Enable PHP Extensions</a>. Loading default extensions in this way is required as extensions cannot be dynamically loaded in the <a class='alert-link' href='http://php.net/manual/en/configuration.file.per-user.php'>.user.ini</a> file.
 </div><ul class='list-group ul-grid'>
 	<li class='list-group-item is-disabled'>php_bz2.dll</li>
 	<li class='list-group-item is-enabled'>php_com_dotnet.dll</li>
@@ -571,9 +571,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 		
 		
 			<section id="cross-platform">
-				<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(Cross Platform 0.7.0)</small></h1>
+				<h1 id='microsoft_azure_cli_tools_'>Microsoft Azure CLI Tools <small>(Cross Platform 0.7.0)</small></h1>
 
-<p>The Windows Azure cross platform command line tools enable the power of the <a href='https://manage.windowsazure.com'>Windows Azure Management Portal</a> at the tip of your fingers on <strong>Linux</strong>, <strong>OSX</strong> or <strong>Windows</strong>. This guide details the command line options for creating, configuring and scaling Windows Azure Web Sites.</p>
+<p>The Microsoft Azure cross platform command line tools enable the power of the <a href='https://manage.windowsazure.com'>Microsoft Azure Management Portal</a> at the tip of your fingers on <strong>Linux</strong>, <strong>OSX</strong> or <strong>Windows</strong>. This guide details the command line options for creating, configuring and scaling Microsoft Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
 	<div class='panel-heading'>
 		<h3 class='panel-title'>Get the Tools</h3>
@@ -609,9 +609,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </div>
 <h2 id='general_web_site_commands'>General Web Site Commands</h2>
 
-<p>General commands for Windows Azure Web Sites include the ability to <strong>create</strong> or <strong>delete</strong> a Web Site in Windows Azure. In addition, they allow you to control they underlying <strong>Web Server</strong> (<abbr title='Internet Information Services'>IIS</abbr>) with actions such as <strong>starting</strong> and <strong>stopping</strong> the site.</p>
+<p>General commands for Microsoft Azure Web Sites include the ability to <strong>create</strong> or <strong>delete</strong> a Web Site in Microsoft Azure. In addition, they allow you to control they underlying <strong>Web Server</strong> (<abbr title='Internet Information Services'>IIS</abbr>) with actions such as <strong>starting</strong> and <strong>stopping</strong> the site.</p>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -630,6 +630,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -650,6 +652,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -686,6 +690,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -698,7 +704,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>set <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -708,8 +714,17 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>--net-version &lt;net-version&gt;</dt><dd>The .NET version. Valid options are v3.5 and v4.5</dd>
 				<dt>--php-version &lt;php-version&gt;</dt><dd>The PHP version. Valid options are off, v5.3 and v5.4</dd>
+				<dt>--platform &lt;platform&gt;</dt><dd>the platform. Valid options are x86 and x64</dd>
+				<dt>-w, --web-socket</dt><dd>use this flag to enable web sockets</dd>
+				<dt>-W, --disable-web-socket</dt><dd>use this flag to disable web sockets</dd>
+				<dt>-r, --remote-debugging</dt><dd>use this flag to enable remote debugging</dd>
+				<dt>-R</dt><dd />
+				<dt>-d, --remote-debugging-version &lt;remote-debugging-version&gt;</dt><dd>the version of remote debugging. It's either VS2012 or VS2013. This parameter is only valid when remote debugging is on.</dd>
+				<dt>-m, --managed-pipeline-mode &lt;managed-pipeline-mode&gt;</dt><dd>the mode for managed pipeline. valid values are Classic and Integrated.</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -730,6 +745,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>-d, --details</dt><dd>show additional site details</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd> 
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -746,13 +764,15 @@ If you need to enable default PHP extensions that are not highlighted below, you
 				<dt>-h, --help</dt>
 <dd>show usage information</dd>
 
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
 				<dt>-v, --verbose</dt>
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
 			</dl>
 		</td>
 		<td>start the Internet Information Services (IIS) site</td>
@@ -766,21 +786,23 @@ If you need to enable default PHP extensions that are not highlighted below, you
 				<dt>-h, --help</dt>
 <dd>show usage information</dd>
 
-				<dt>-s, --subscription &lt;id&gt;</dt>
-<dd>execute command against the provided subscription</dd>
-
 				<dt>-v, --verbose</dt>
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
 			</dl>
 		</td>
 		<td>stop the Internet Information Services (IIS) site</td>
 	</tr>
 	<tr>
-		<td>restart <dfn data-title='provide options for this command. see help'>[options]</dfn>
+		<td>swap <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-</td>
+<p><span class='label label-warning'>new</span></p></td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -793,6 +815,30 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+			</dl>
+		</td>
+		<td>swaps the staging site into production</td>
+	</tr>
+	<tr>
+		<td>restart <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+</td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
 			</dl>
 		</td>
 		<td>stop, then start the Internet Information Services (IIS) site</td>
@@ -800,7 +846,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h2 id='web_site_deployment_commands'>Web Site Deployment Commands</h2>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site deployment</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site deployment</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -849,6 +895,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -872,6 +920,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -895,6 +945,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -917,6 +969,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 			
@@ -932,7 +986,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	</tr>
 	<tr>
 		<td>user set <dfn data-title='provide options for this command. see help'>[options]</dfn>
- [username] [pass]<p><span class='label label-warning'>new</span></p></td>
+ [username] [pass]</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -942,6 +996,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -954,7 +1010,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h2 id='web_site_repository_commands'>Web Site Repository Commands</h2>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site repository</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site repository</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -973,6 +1029,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -993,6 +1051,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1005,7 +1065,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>sync <dfn data-title='DNS prefix for the web site'>[name]</dfn>
  <dfn data-title='provide options for this command. see help'>[options]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1015,6 +1075,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1025,7 +1087,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h2 id='web_site_location_commands'>Web Site Location Commands</h2>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site location</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site location</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1052,7 +1114,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 <h3 id='app_settings_configuration'>App Settings Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site appsetting</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site appsetting</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1061,7 +1123,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1071,6 +1133,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1081,7 +1145,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn title='configuration name-value pair &apos;key=value&apos;'>&lt;keyvaluepair&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1091,6 +1155,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1101,7 +1167,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1111,11 +1177,13 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
-				<dt>-q, --quite</dt>
-<dd>quite mode, do not ask for confirmation</dd>
 			</dl>
 		</td>
 		<td>Deletes an application setting for your site</td>
@@ -1123,7 +1191,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn title='configuration key'>&lt;key&gt;</dfn> <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1133,6 +1201,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1143,7 +1213,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='ssl_certificate_configuration'>SSL Certificate Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site cert</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site cert</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1152,7 +1222,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1172,7 +1242,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;certificate-path&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1193,7 +1263,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1215,7 +1285,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;thumbprint&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1238,7 +1308,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <p><strong>Warning!</strong></p>
 <p><code>azure site config</code> has been deprecated and will be removed in a future release. Please use <code>azure site appsetting</code> instead.</p>
 </div><table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site config</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site config</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1327,7 +1397,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='connection_string_configuration'>Connection String Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site connectionstring</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site connectionstring</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1336,7 +1406,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1346,6 +1416,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1356,7 +1428,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;connectionname&gt; &lt;value&gt; &lt;type&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1366,6 +1438,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1379,7 +1453,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;connectionname&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1389,6 +1463,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1402,7 +1478,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
  &lt;connectionname&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1412,6 +1488,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1423,7 +1501,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='default_document_configuration'>Default Document Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site defaultdocument</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site defaultdocument</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1432,7 +1510,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1442,6 +1520,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1452,7 +1532,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1462,6 +1542,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1475,7 +1557,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1485,6 +1567,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1499,7 +1583,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='custom_domain_configuration'>Custom Domain Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site domain</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site domain</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1508,7 +1592,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1518,6 +1602,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1528,7 +1614,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1538,6 +1624,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1550,7 +1638,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1560,6 +1648,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1574,7 +1664,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='http_handler_configuration'>HTTP Handler Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site handler</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site handler</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1583,7 +1673,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1593,6 +1683,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1603,7 +1695,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>add <dfn data-title='provide options for this command. see help'>[options]</dfn>
  [extension] [processor] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1613,6 +1705,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1627,7 +1721,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
  [extension] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1637,6 +1731,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1649,9 +1745,222 @@ If you need to enable default PHP extensions that are not highlighted below, you
 		<td>Deletes a site handler mapping</td>
 	</tr>
 </table>
+<h3 id='web_job_configuration'>Web Job Configuration</h3>
+<table class='table table-striped cli cmd'>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site job</kbd></caption>
+	<tr>
+		<th class='w20'>command</th>
+		<th class='w60'>options</th>
+		<th>description</th>
+	</tr>
+	<tr>
+		<td>delete <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;jobName&gt; &lt;jobType&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--job-type &lt;job-type&gt;</dt>
+<dd>required. The type of the webjob. Valid value is "triggered" or "continuous".</dd>
+				<dt>-q, --quite</dt>
+<dd>quite mode, do not ask for confirmation</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Delete a web job</td>
+	</tr>
+	<tr>
+		<td>history list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ [jobName] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>List all the triggered web jobs runs under a web site</td>
+	</tr>
+	<tr>
+		<td>history show <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ [jobName] [runId] <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--run-id &lt;run-id&gt;</dt><dd>optional. The id of the run history. If not specified, show the latest run.</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Get the details for a triggered web jobs run under a web site</td>
+	</tr>
+	<tr>
+		<td>list <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-type &lt;job-type%gt;</dt><dd>optional. The type of the webjob. Valid value is "triggered" or "continuous". By default return webjobs of all types.</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>List all the web jobs under a web site</td>
+	</tr>
+	<tr>
+		<td>show <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;jobName&gt; &lt;jobType&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--job-type &lt;job-type&gt;</dt>
+<dd>required. The type of the webjob. Valid value is "triggered" or "continuous".</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Show details of a specific web job</td>
+	</tr>
+	<tr>
+		<td>start <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;jobName&gt; &lt;jobType&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--job-type &lt;job-type&gt;</dt>
+<dd>required. The type of the webjob. Valid value is "triggered" or "continuous".</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Start a web job</td>
+	</tr>
+	<tr>
+		<td>stop <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;jobName&gt; &lt;jobType&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Stop a web job. Only continuous jobs can  be stopped</td>
+	</tr>
+	<tr>
+		<td>upload <dfn data-title='provide options for this command. see help'>[options]</dfn>
+ &lt;jobName&gt; &lt;jobType&gt; &lt;jobFile&gt; <dfn data-title='DNS prefix for the web site'>[name]</dfn>
+<p><span class='label label-warning'>new</span></p></td>
+		<td>
+			<dl class='dl-horizontal'>
+				<dt>-h, --help</dt>
+<dd>show usage information</dd>
+
+				<dt>-v, --verbose</dt>
+<dd>use verbose output</dd>
+				<dt>--json</dt>
+<dd>use json output</dd>
+				<dt>--job-name &lt;job-name&gt;</dt>
+<dd>required. The name of the webjob.</dd>
+				<dt>--job-type &lt;job-type&gt;</dt>
+<dd>required. The type of the webjob. Valid value is "triggered" or "continuous".</dd>
+				<dt>--job-file &lt;job-file&gt;</dt>
+<dd>required. the job file.</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
+				<dt>-s, --subscription &lt;id&gt;</dt>
+<dd>execute command against the provided subscription</dd>
+
+			</dl>
+		</td>
+		<td>Upload a web job</td>
+	</tr>
+</table>
 <h3 id='logging_configuration'>Logging Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site log</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site log</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1670,6 +1979,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1691,6 +2002,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1704,7 +2017,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<tr>
 		<td>set <dfn data-title='provide options for this command. see help'>[options]</dfn>
  <dfn data-title='DNS prefix for the web site'>[name]</dfn>
-<p><span class='label label-warning'>new</span></p></td>
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>-h, --help</dt>
@@ -1714,6 +2027,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1735,7 +2050,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </table>
 <h3 id='scale_configuration'>Scale Configuration</h3>
 <table class='table table-striped cli cmd'>
-	<caption><bdi>waws-dev$ </bdi><kbd>azure site scale</kbd></caption>
+	<caption><bdi>maws-dev$ </bdi><kbd>azure site scale</kbd></caption>
 	<tr>
 		<th class='w20'>command</th>
 		<th class='w60'>options</th>
@@ -1753,6 +2068,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1773,6 +2090,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <dd>use verbose output</dd>
 				<dt>--json</dt>
 <dd>use json output</dd>
+				<dt>--slot &lt;slot&gt;</dt>
+<dd>the name of the slot</dd>
 				<dt>-s, --subscription &lt;id&gt;</dt>
 <dd>execute command against the provided subscription</dd>
 
@@ -1812,9 +2131,9 @@ If you need to enable default PHP extensions that are not highlighted below, you
 
 		
 			<section id="powershell">
-				<h1 id='windows_azure_cli_tools_'>Windows Azure CLI Tools <small>(PowerShell 0.6.18)</small></h1>
+				<h1 id='microsoft_azure_cli_tools_'>Microsoft Azure CLI Tools <small>(PowerShell 0.6.18)</small></h1>
 
-<p>The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Windows Azure Web Sites.</p>
+<p>The Microsoft Azure PowerShell Cmdlets enable the power of the Microsoft Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Microsoft Azure Web Sites.</p>
 <div class='panel panel-primary hidden-sm'>
 	<div class='panel-heading'>
 		<h3 class='panel-title'>Get the Tools</h3>
@@ -1838,7 +2157,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 </div>
 <h2 id='web_site_management'>Web Site Management</h2>
 
-<p>These Cmdlets enable the ability to create new Windows Azure Web Sites with options to associate a local Git or GitHub repository to your site. The Cmdlets also allow the deletion of Web Sites from your subscription.</p>
+<p>These Cmdlets enable the ability to create new Microsoft Azure Web Sites with options to associate a local Git or GitHub repository to your site. The Cmdlets also allow the deletion of Web Sites from your subscription.</p>
 <table class='table table-striped cli ps'>
 <caption><bdi>PS > </bdi><kbd>New-AzureWebSite</kbd></caption>
 	<tr>
@@ -1918,7 +2237,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 				-PublishingUsername &lt;string&gt;
 			</dl>
 		</td>
-		<td>The username you have specified in the Windows Azure Portal for Git deployment</td>
+		<td>The username you have specified in the Microsoft Azure Portal for Git deployment
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>Required?</dt>
@@ -1941,7 +2261,8 @@ If you need to enable default PHP extensions that are not highlighted below, you
 			</dl>
 		</td>
 		<td>Set up a local git repository and link it to the website.  If specified, this will set up a git repository in
-the local directory and add a remote named 'azure' that links to the website in Windows Azure.</td>
+the local directory and add a remote named 'azure' that links to the website in Microsoft Azure.
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>Required?</dt>
@@ -1964,7 +2285,8 @@ the local directory and add a remote named 'azure' that links to the website in 
 			</dl>
 		</td>
 		<td>If enabled, link this website with an existing Github repository.  Commits to the Giuthub repository will be
-pushed to the website in Windows Azure.</td>
+pushed to the website in Microsoft Azure.
+</td>
 		<td>
 			<dl class='dl-horizontal'>
 				<dt>Required?</dt>
@@ -2070,7 +2392,7 @@ pushed to the website in Windows Azure.</td>
 </table>
 <h2 id='web_site_configuration'>Web Site Configuration</h2>
 
-<p>These Cmdlets enable the ability to list or set configuration settings in Windows Azure Web Sites.</p>
+<p>These Cmdlets enable the ability to list or set configuration settings in Microsoft Azure Web Sites.</p>
 <table class='table table-striped cli ps'>
 <caption><bdi>PS > </bdi><kbd>Get-AzureWebSite</kbd></caption>
 	<tr>
