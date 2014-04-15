@@ -4,7 +4,7 @@ categories: [deployment]
 
 # Deployment
 
-There are a number of ways to deploy your applications to Windows Azure Web Sites, there are also a number of ways to tie into the deployment process to aid you in Automation, Configuration, or Diagnosing issues with your deployment.
+There are a number of ways to deploy your applications to Microsoft Azure Web Sites, there are also a number of ways to tie into the deployment process to aid you in Automation, Configuration, or Diagnosing issues with your deployment.
 
 ## Supported Deployment Types
 
@@ -16,7 +16,7 @@ There are a number of ways to deploy your applications to Windows Azure Web Site
 	
 {% include html-panel-kudu-install.md %}
 
-Kudu is the central nervous system of a Windows Azure Web Site; it handles the Git integration to a Web Site as well as provides an API endpoint for programmatic access to app settings, deployment information, files, active processes, runtime versions, source control information, web hooks and web jobs. Kudu, itself, is a Site Extension which is provided with ever Web Site, you can access it by using the Source Control Management entry point **https://&lt;your-website-name&gt;.scm.azurewebsites.net**
+Kudu is the central nervous system of a Microsoft Azure Web Site; it handles the Git integration to a Web Site as well as provides an API endpoint for programmatic access to app settings, deployment information, files, active processes, runtime versions, source control information, web hooks and web jobs. Kudu, itself, is a Site Extension which is provided with ever Web Site, you can access it by using the Source Control Management entry point **https://&lt;your-website-name&gt;.scm.azurewebsites.net**
 
 #### Kudu Dash(board)
 
@@ -42,13 +42,17 @@ Log Stream long-polling process which provides logging data from your Web Site i
 
 ##### Web Hooks
 
-Allows URLs to be registered as Web Hooks. Informtion will be posted to the URL when events occur.
+Allows URLs to be registered as Web Hooks. Information will be posted to the URL when events occur.
+
+#### Hooking the Deployment
+
+
 
 ### KuduExec
 
 {% include html-panel-kuduexec-install.md %}
 
-KuduExec enables command-line access to a Windows Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) endpoint of the website as the first parameter.
+KuduExec enables command-line access to a Microsoft Azure Web Site. Simply call KuduExec and pass in the Source Control Management (scm) endpoint of the website as the first parameter.
 
 <pre>
 kuduexec https://[site-name].scm.azurewebsites.net

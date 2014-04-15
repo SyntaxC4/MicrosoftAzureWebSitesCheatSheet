@@ -3,7 +3,7 @@
 #### Node Version
 
 <table>
-	<caption>Default Node.js version on Windows Azure Web Sites</caption>
+	<caption>Default Node.js version on Microsoft Azure Web Sites</caption>
 	<tr>
 		<th></th>
 		<th></th>

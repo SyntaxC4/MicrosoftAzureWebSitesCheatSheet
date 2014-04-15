@@ -2,9 +2,9 @@
 categories: [command-line, powershell]
 ---
 
-# Windows Azure CLI Tools <small>(PowerShell 0.6.18)</small>
+# Microsoft Azure CLI Tools <small>(PowerShell 0.6.18)</small>
 
-The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Windows Azure Web Sites.
+The Microsoft Azure PowerShell Cmdlets enable the power of the Microsoft Azure Management Portal straight from the PowerShell command window. This guide details the command line operations for interacting with Microsoft Azure Web Sites.
 
 {% include html-cli-powershell-install.md %}
 
@@ -12,7 +12,7 @@ The Windows Azure PowerShell Cmdlets enable the power of the Windows Azure Manag
 
 ## Web Site Management
 
-These Cmdlets enable the ability to create new Windows Azure Web Sites with options to associate a local Git or GitHub repository to your site. The Cmdlets also allow the deletion of Web Sites from your subscription.
+These Cmdlets enable the ability to create new Microsoft Azure Web Sites with options to associate a local Git or GitHub repository to your site. The Cmdlets also allow the deletion of Web Sites from your subscription.
 
 {% include html-cli-powershell-new.md %}
 
@@ -20,7 +20,7 @@ These Cmdlets enable the ability to create new Windows Azure Web Sites with opti
 
 ## Web Site Configuration
 
-These Cmdlets enable the ability to list or set configuration settings in Windows Azure Web Sites.
+These Cmdlets enable the ability to list or set configuration settings in Microsoft Azure Web Sites.
 
 {% include html-cli-powershell-get.md %}
 

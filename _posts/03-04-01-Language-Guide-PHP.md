@@ -8,7 +8,7 @@ So, you fancy programming PHP do ya? Well, here are some tips specifically for y
 
 ### PHP Runtimes
 
-Windows Azure Web Sites has a selection of default installed PHP Runtimes, however, the option is still available to bring your own runtime if a specific version of PHP is required.
+Microsoft Azure Web Sites has a selection of default installed PHP Runtimes, however, the option is still available to bring your own runtime if a specific version of PHP is required.
 
 {% include html-php-runtimes.md %}
 
@@ -33,8 +33,8 @@ In order to do this there are a few steps involved:
 			rm php.zip
 			</pre>
 
-2. Configure an Handler Mapping via the Windows Azure Management Portal; or
-	* Login to the Windows Azure Management Portal 
+2. Configure an Handler Mapping via the Microsoft Azure Management Portal; or
+	* Login to the Microsoft Azure Management Portal 
 	* Select your Web Site from the list
 	* Navigate to the **CONFIGURE** tab
 	* Scroll to the **Handler Mappings** section

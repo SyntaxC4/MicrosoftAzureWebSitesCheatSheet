@@ -12,5 +12,5 @@
 </div>
 
 <div class="alert alert-danger">
-Windows Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
+Microsoft Azure Web Sites is a shared environment. The context of command line access is contained within a sandbox.
 </div>

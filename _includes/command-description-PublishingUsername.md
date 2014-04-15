@@ -1,1 +1,1 @@
-The username you have specified in the Windows Azure Portal for Git deployment
+The username you have specified in the Microsoft Azure Portal for Git deployment

@@ -3,7 +3,7 @@
 #### .NET Runtimes
 
 <table>
-	<caption>Default .NET Runtime versions on Windows Azure Web Sites</caption>
+	<caption>Default .NET Runtime versions on Microsoft Azure Web Sites</caption>
 	<tr>
 		<th></th>
 		<th></th>
