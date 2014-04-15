@@ -43,6 +43,10 @@ li.is-disabled, li.is-disabled a { color: #ccc; background-color: #f9f9f9 !impor
 li.is-enabled, li.is-enabled a { color: #468847; background-color: #dff0d8 !important; }
 
 ol ul { list-style-type: square;}
+
+.list-group-item:last-child {
+	margin-bottom: 5px;
+}
  
 /*
 	Styles

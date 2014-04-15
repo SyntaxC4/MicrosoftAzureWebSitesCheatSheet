@@ -12,6 +12,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>--mode &lt;mode&gt;</dt><dd>The mode of the site (available are: free, shared and standard)</dd>
 			</dl>
@@ -25,6 +26,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>--instances &lt;instances&gt;</dt><dd>The number of instances</dd>
 				<dt>--size &lt;size&gt;</dt><dd>The size of the instances (available are: small, medium and large)</dd>

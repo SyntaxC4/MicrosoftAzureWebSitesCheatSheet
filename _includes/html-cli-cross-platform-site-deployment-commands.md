@@ -37,6 +37,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				{% include command-option-max.md %}
 			</dl>
@@ -50,6 +51,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				{% include command-option-details.md %}
 			</dl>
@@ -63,6 +65,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				{% include command-option-quiet.md %}
 			</dl>
@@ -76,6 +79,7 @@
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}			
 				{% include command-option-githubusername.md %}
 				{% include command-option-githubpassword.md %}
@@ -85,12 +89,13 @@
 		<td>setup a <a href="http://github.com">github service hook</a> for specified web site</td>
 	</tr>
 	<tr>
-		<td>user set {% include command-argument-options.md %} [username] [pass]<p><span class="label label-warning">new</span></p></td>
+		<td>user set {% include command-argument-options.md %} [username] [pass]</td>
 		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
+				{% include command-option-slot.md %}
 				{% include command-option-subscription.md %}
 				<dt>-u, --username &lt;gitUsername&gt;</dt><dd>The new git username</dd>
 				<dt>-p, --pass &lt;gitPassword&gt;</dt><dd>The new git password</dd>
