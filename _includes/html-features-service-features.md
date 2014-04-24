@@ -12,7 +12,7 @@
 	<li class="list-group-item is-enabled">HTTP Compression <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">IP Restriction <span class="label label-warning">New</span></li>	
 	<li class="list-group-item is-enabled">IP SSL</li>
-	<li class="list-group-item is-disabled">Java</li>
+	<li class="list-group-item is-enabled">Java</li>
 	<li class="list-group-item is-disabled">Linux</li>
 	<li class="list-group-item is-enabled">MySQL</li>
 	<li class="list-group-item is-enabled">MS SQL Server</li>
