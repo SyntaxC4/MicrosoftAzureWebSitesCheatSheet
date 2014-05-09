@@ -66,15 +66,18 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 :: Generate Static Site
 :: --------------------
 
+SET RUBY_PATH = d:\home\site\ruby\bin
+SET RUBY_DEVKIT_PATH = d:\home\site\rubydevkit
+
 IF NOT EXISTS path.txt (
   %path >> path.txt
-  IF NOT DEFINED findstr /c:"d:\\home\\site\\ruby\\bin" path.txt (
-    path=%path%;d:\home\site\ruby\bin
-    call d:\home\site\rubydevkit\devkitvars.bat
+  IF NOT DEFINED [findstr /c:%RUBY_PATH% path.txt] (
+    path=%path%;%RUBY_PATH%
+    call %RUBY_DEVKIT_PATH%\devkitvars.bat
   )
 )
 
-jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_sitegi
+jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_site
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
