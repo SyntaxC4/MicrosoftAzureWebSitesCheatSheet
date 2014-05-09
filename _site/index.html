@@ -29,7 +29,7 @@
 			  <span class="icon-bar"></span>
 			  <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">MAWS Cheat Sheet</a>
+			<a class="navbar-brand" href="#">Azure Websites Cheat Sheet</a>
 		</div>
 	
 		<div class="collapse navbar-collapse navbar-wawscs-collapse">
@@ -69,7 +69,7 @@
 <section id="home">
 	<h1 id="howdy-cloud-adventurer">Howdy, Cloud Adventurer!</h1>
 
-<p>You&#8217;ve stumbled across the Microsoft Azure Web Sites Cheat Sheet &#8211; The quickest reference for getting to know <a href="http://www.windowsazure.com/en-us/home/scenarios/web-sites">Microsoft Azure Web Sites</a> on the web. If you&#8217;re looking for some <a href="http://www.windowsazure.com/en-us/develop/overview">tutorials</a> on how to develop solutions on Microsoft Azure Web Sites check out the <a href="http://www.windowsazure.com">Microsoft Azure</a> product site or the <a href="http://www.windowsazure.com/en-us/develop/net/other-resources/training-kit">Microsoft Azure Training Kit</a>.</p>
+<p>You’ve stumbled across the Microsoft Azure Web Sites Cheat Sheet – The quickest reference for getting to know <a href="http://www.windowsazure.com/en-us/home/scenarios/web-sites">Microsoft Azure Web Sites</a> on the web. If you’re looking for some <a href="http://www.windowsazure.com/en-us/develop/overview">tutorials</a> on how to develop solutions on Microsoft Azure Web Sites check out the <a href="http://www.windowsazure.com">Microsoft Azure</a> product site or the <a href="http://www.windowsazure.com/en-us/develop/net/other-resources/training-kit">Microsoft Azure Training Kit</a>.</p>
 
 <p>Browse around this one page reference for information on <strong>command-line tools</strong><!--, **language references**, lesser known **utilities**--> for managing your Microsoft Azure Web Sites. Take a quick look at the <strong>features</strong> that are offered on Microsoft Azure Web Sites then start exploring the wonderful world of Microsoft Azure!</p>
 
@@ -98,7 +98,7 @@
 	<li class="list-group-item is-enabled">HTTP Compression <span class="label label-warning">New</span></li>
 	<li class="list-group-item is-enabled">IP Restriction <span class="label label-warning">New</span></li>	
 	<li class="list-group-item is-enabled">IP SSL</li>
-	<li class="list-group-item is-disabled">Java</li>
+	<li class="list-group-item is-enabled">Java</li>
 	<li class="list-group-item is-disabled">Linux</li>
 	<li class="list-group-item is-enabled">MySQL</li>
 	<li class="list-group-item is-enabled">MS SQL Server</li>
@@ -244,14 +244,14 @@ Password: [deployment-pass]
 	</div>
 </div>
 
-<p>KuduSync is a tool for syncing files for deployment, will only copy changed files and delete files that doesn&#8217;t exists in the destination but only if they were part of the previous deployment.</p>
+<p>KuduSync is a tool for syncing files for deployment, will only copy changed files and delete files that doesn’t exists in the destination but only if they were part of the previous deployment.</p>
 
 <div class="alert alert-info">
 KuduSync is responsible for file synchronization during deployment. It is called at the end of the default deployment process (you can <a href="#custom-deployment-script">customize the deployment script</a>) to move files between the <code>%DEPLOYMENT_SOURCE%</code> folder and the <code>%DEPLOYMENT_TARGET%</code>.
 </div>
 
 <table class="table table-striped cli cmd">
-<caption><bdi>maws-dev$ </bdi>
+<caption><bdi>websites-dev$ </bdi>
 <kbd>kudusync [options]</kbd></caption>
 <tr>
 	<th class="w20">command</th>
@@ -534,7 +534,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 	<li class="list-group-item is-disabled">php_xsl.dll</li>
 </ul>
 
-<h3 id="enabling-php-extensions--idenable-php-extensions">Enabling PHP Extensions {: id=&#8221;enable-php-extensions&#8221;}</h3>
+<h3 id="enabling-php-extensions--idenable-php-extensions">Enabling PHP Extensions {: id=”enable-php-extensions”}</h3>
 
 <p>Extensions can be enabled by adding <strong>App Settings</strong> to your Web Site with the following reserved app setting keys.</p>
 
@@ -654,7 +654,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <p>General commands for Microsoft Azure Web Sites include the ability to <strong>create</strong> or <strong>delete</strong> a Web Site in Microsoft Azure. In addition, they allow you to control they underlying <strong>Web Server</strong> (<abbr title="Internet Information Services">IIS</abbr>) with actions such as <strong>starting</strong> and <strong>stopping</strong> the site.</p>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -892,7 +892,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h2 id="web-site-deployment-commands">Web Site Deployment Commands</h2>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site deployment</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1059,7 +1059,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h2 id="web-site-repository-commands">Web Site Repository Commands</h2>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site repository</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1139,7 +1139,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h2 id="web-site-location-commands">Web Site Location Commands</h2>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site location</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1169,7 +1169,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="app-settings-configuration">App Settings Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site appsetting</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1271,7 +1271,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="ssl-certificate-configuration">SSL Certificate Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site cert</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1370,7 +1370,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <p><code>azure site config</code> has been deprecated and will be removed in a future release. Please use <code>azure site appsetting</code> instead.</p>
 </div>
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site config</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1462,7 +1462,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="connection-string-configuration">Connection String Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site connectionstring</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1569,7 +1569,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="default-document-configuration">Default Document Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site defaultdocument</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1654,7 +1654,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="custom-domain-configuration">Custom Domain Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site domain</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1738,7 +1738,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="http-handler-configuration">HTTP Handler Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site handler</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -1824,7 +1824,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="web-job-configuration">Web Job Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site job</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -2040,7 +2040,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="logging-configuration">Logging Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site log</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -2133,7 +2133,7 @@ If you need to enable default PHP extensions that are not highlighted below, you
 <h3 id="scale-configuration">Scale Configuration</h3>
 
 <table class="table table-striped cli cmd">
-	<caption><bdi>maws-dev$ </bdi>
+	<caption><bdi>websites-dev$ </bdi>
 <kbd>azure site scale</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
