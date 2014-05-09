@@ -67,14 +67,14 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 :: --------------------
 
 IF NOT EXISTS path.txt (
-  path>>path.txt
-  IF NOT DEFINED findstr "d:\home\site\ruby\bin" path.txt (
+  path >> path.txt
+  IF NOT DEFINED findstr /c:"d:\\home\\site\\ruby\\bin" path.txt (
     path=%path%;d:\home\site\ruby\bin
     call d:\home\site\rubydevkit\devkitvars.bat
   )
 )
 
-jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_site
+jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_sitegi
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
