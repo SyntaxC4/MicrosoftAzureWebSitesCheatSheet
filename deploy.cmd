@@ -69,7 +69,7 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 SET RUBY_PATH = d:\home\site\ruby\bin
 SET RUBY_DEVKIT_PATH = d:\home\site\rubydevkit
 
-IF NOT EXISTS path.txt (
+IF NOT EXIST path.txt (
   %path >> path.txt
   IF NOT DEFINED [findstr /c:%RUBY_PATH% path.txt] (
     path=%path%;%RUBY_PATH%
