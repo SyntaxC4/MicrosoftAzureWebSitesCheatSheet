@@ -66,10 +66,10 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 :: Generate Static Site
 :: --------------------
 
-echo "Generte Static Site"
+echo "Generate Static Site"
 
-SET RUBY_PATH = d:\home\site\ruby\bin
-SET RUBY_DEVKIT_PATH = d:\home\site\rubydevkit
+SET RUBY_PATH=d:\home\site\ruby\bin
+SET RUBY_DEVKIT_PATH=d:\home\site\rubydevkit
 
 echo "Path Set"
 
