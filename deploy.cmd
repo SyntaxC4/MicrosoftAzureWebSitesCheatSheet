@@ -66,18 +66,31 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 :: Generate Static Site
 :: --------------------
 
+echo "Generte Static Site"
+
 SET RUBY_PATH = d:\home\site\ruby\bin
 SET RUBY_DEVKIT_PATH = d:\home\site\rubydevkit
 
+echo "Path Set"
+
 IF NOT EXIST RUBY_INSTALLED (
+
+echo "Ruby not installed" 
+
     path=%path%;%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
     gem install jekyll
 
+echo "Set Ruby Instlled" 
+
     SET RUBY_INSTALLED=true
 )
 
+echo "Run Jekyll"
+
 jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_site
+
+echo "Jekyll complete"
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
