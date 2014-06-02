@@ -72,6 +72,7 @@ IF NOT EXIST RUBY_INSTALLED (
     PATH="%path%";%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
     gem install jekyll
+	IF !ERRORLEVEL! NEQ 0 goto error
 	SET RUBY_INSTALLED="true"
 )
 
