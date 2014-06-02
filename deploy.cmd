@@ -80,7 +80,7 @@ echo "Ruby not installed"
     path=%path%;%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
     gem install jekyll
-
+	
 echo "Set Ruby Instlled" 
 
     SET RUBY_INSTALLED=true
@@ -88,7 +88,7 @@ echo "Set Ruby Instlled"
 
 echo "Run Jekyll"
 
-jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_site
+jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
 
 echo "Jekyll complete"
 
