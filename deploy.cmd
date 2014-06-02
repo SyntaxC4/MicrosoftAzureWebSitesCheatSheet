@@ -73,14 +73,7 @@ IF NOT EXIST RUBY_INSTALLED (
 	IF !ERRORLEVEL! NEQ 0 goto error
 	SET RUBY_INSTALLED="true"
 )
-
 call jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:: Post deployment stub
-IF DEFINED POST_DEPLOYMENT_ACTION call "%POST_DEPLOYMENT_ACTION%"
-IF !ERRORLEVEL! NEQ 0 goto error
 
 goto end
 
