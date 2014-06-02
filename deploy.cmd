@@ -69,16 +69,10 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 echo "Generate Static Site"
 
 IF NOT EXIST RUBY_INSTALLED (
-
-echo "Ruby not installed" 
-
     PATH="%path%";%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
     gem install jekyll
-	
-echo "Set Ruby Instlled" 
-
-    SET RUBY_INSTALLED=true
+	SET RUBY_INSTALLED="true"
 )
 
 echo "Run Jekyll"
