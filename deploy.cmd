@@ -71,12 +71,10 @@ echo "Generate Static Site"
 IF NOT EXIST RUBY_INSTALLED (
     PATH="%path%";%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
-    gem install jekyll
+    call gem install jekyll
 	IF !ERRORLEVEL! NEQ 0 goto error
 	SET RUBY_INSTALLED="true"
 )
-
-SLEEP 10
 
 call jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
 echo Jekyll Built
