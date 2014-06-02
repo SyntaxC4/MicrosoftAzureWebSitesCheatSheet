@@ -77,7 +77,6 @@ IF NOT EXIST RUBY_INSTALLED (
 )
 
 call jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
-echo Jekyll Built
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
