@@ -73,16 +73,13 @@ IF NOT EXIST RUBY_INSTALLED (
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
     gem install jekyll
 	IF !ERRORLEVEL! NEQ 0 goto error
-	echo creating environment variable
 	SET RUBY_INSTALLED="true"
-	echo environment variable set
 )
 
-echo "Run Jekyll"
+SLEEP 10
 
-jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
-
-echo "Jekyll complete"
+call jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
+echo Jekyll Built
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 
