@@ -8,7 +8,7 @@
 		<td>PHP_EXTENSIONS</td>
 		<td>
 			<dl>
-				<dt>comma delimited list of paths to <abbr title="Dynamic Link Libraries">DLLs</abbr></dt>
+				<dt>comma delimited list of relative paths to <abbr title="Dynamic Link Libraries">DLLs</abbr></dt>
 				<dd>bin\ext\php_mongo.dll,bin\ext\php_xdebug.dll</dd>
 			</dl>
 		</td>
@@ -18,7 +18,7 @@
 		<td>PHP_ZENDEXTENSIONS</td>
 		<td>
 			<dl>
-				<dt>comma delimited list of paths to <abbr title="Dynamic Link Libraries">DLLs</abbr></dt>
+				<dt>comma delimited list of relative paths to <abbr title="Dynamic Link Libraries">DLLs</abbr></dt>
 				<dd>bin\ext\php_xdebug.dll,bin\ext\ZendLoader.dll</dd>
 			</dl>
 		</td>
