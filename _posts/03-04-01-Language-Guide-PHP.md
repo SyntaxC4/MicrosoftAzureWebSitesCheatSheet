@@ -39,15 +39,16 @@ In order to do this there are a few steps involved:
 	* Navigate to the **CONFIGURE** tab
 	* Scroll to the **Handler Mappings** section
 	* Flll the boxes as follows:
+		
 		{% include html-php-http-handler-mapping.md %}
 		
 3. Configure a Handler Mapping via the command line:
-
-	#### Cross Platform Command Line Tools
-
+	
+	**Cross Platform Command Line Tools**
+	
 	<pre>azure site handler add '*.php' 'D:\home\site\wwwroot\bin\php\php-cgi.exe'</pre>
 	
-	#### PowerShell Cmdlets
+	**PowerShell Cmdlets**
 	
 	<pre>
 	$phpMapping = (@{Extension="*.php";ScriptProcessor="d:\home\site\wwwroot\bin\php\php-cgi.exe"}) 
@@ -60,7 +61,7 @@ In order to do this there are a few steps involved:
 {% include html-alert-enable-default-php-extensions.md %}
 {% include html-php-extensions.md %}
 
-### Enabling PHP Extensions {: id="enable-php-extensions"}
+### Enabling PHP Extensions
 
 Extensions can be enabled by adding **App Settings** to your Web Site with the following reserved app setting keys.
 
