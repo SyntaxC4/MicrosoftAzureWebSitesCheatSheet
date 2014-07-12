@@ -39,6 +39,7 @@ In order to do this there are a few steps involved:
 	* Navigate to the **CONFIGURE** tab
 	* Scroll to the **Handler Mappings** section
 	* Flll the boxes as follows:
+		
 		{% include html-php-http-handler-mapping.md %}
 
 3. Configure a Handler Mapping via the command line:

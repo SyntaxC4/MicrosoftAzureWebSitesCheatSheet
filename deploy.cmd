@@ -60,30 +60,20 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Generate Static Site
 :: --------------------
 
-SET RUBY_PATH = d:\home\site\ruby\bin
-SET RUBY_DEVKIT_PATH = d:\home\site\rubydevkit
+echo "Generate Static Site"
 
-IF NOT EXIST path.txt (
-  %path >> path.txt
-  IF NOT DEFINED [findstr /c:%RUBY_PATH% path.txt] (
-    path=%path%;%RUBY_PATH%
+IF NOT EXIST RUBY_INSTALLED (
+    PATH="%path%";%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
-  )
+    call gem install jekyll
+	IF !ERRORLEVEL! NEQ 0 goto error
+	SET RUBY_INSTALLED="true"
 )
-
-jekyll build -s %DEPLOYMENT_TARGET% -d %DEPLOYMENT_TARGET%\_site
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:: Post deployment stub
-IF DEFINED POST_DEPLOYMENT_ACTION call "%POST_DEPLOYMENT_ACTION%"
-IF !ERRORLEVEL! NEQ 0 goto error
+call jekyll build -s "%DEPLOYMENT_TARGET%" -d "%DEPLOYMENT_TARGET%\_site"
 
 goto end
 
