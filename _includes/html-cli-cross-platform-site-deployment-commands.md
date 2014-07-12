@@ -1,4 +1,4 @@
-<table class="table table-striped cli cmd">
+<table class="table cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site deployment</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -32,8 +32,8 @@
 	</tr>
 	<tr>
 		<td>list  {% include command-argument-options.md %} {% include command-argument-name.md %}</td>
-		<td>	
-			<dl class="dl-horizontal">	
+		<td>
+			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
@@ -80,7 +80,7 @@
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
 				{% include command-option-slot.md %}
-				{% include command-option-subscription.md %}			
+				{% include command-option-subscription.md %}
 				{% include command-option-githubusername.md %}
 				{% include command-option-githubpassword.md %}
 				{% include command-option-githubrepository.md %}

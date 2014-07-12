@@ -1,4 +1,4 @@
-<table class="table table-striped cli ps">
+<table class="table cli ps">
 <caption>{% include snippet-fun-powershelluser.md %}<kbd>Remove-AzureWebSite</kbd></caption>
 	<tr>
 		<th class="w30">parameter</th>

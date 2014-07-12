@@ -2,7 +2,7 @@
 <p><strong>Warning!</strong></p>
 <p><code>azure site config</code> has been deprecated and will be removed in a future release. Please use <code>azure site appsetting</code> instead.</p>
 </div>
-<table class="table table-striped cli cmd">
+<table class="table cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site config</kbd></caption>
 	<tr>
 		<th class="w20">command</th>
@@ -23,7 +23,7 @@
 	</tr>
 	<tr>
 		<td>add {% include command-argument-options.md %} {% include command-argument-keyvaluepair.md %} {% include command-argument-name.md %}</td>
-		<td>	
+		<td>
 			<dl class="dl-horizontal">
 				{% include command-option-help.md %}
 				{% include command-option-verbose.md %}
@@ -41,7 +41,7 @@
 				{% include command-option-verbose.md %}
 				{% include command-option-json.md %}
 				{% include command-option-subscription.md %}
-			</dl>			
+			</dl>
 		</td>
 		<td>removes an <em>app setting</em> from the specified web site</td>
 	</tr>

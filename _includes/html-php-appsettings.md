@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="table">
 	<tr>
 		<th>Key</th>
 		<th>Value</th>

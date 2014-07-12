@@ -1,4 +1,4 @@
-<table class="table table-striped cli cmd">
+<table class="table cli cmd">
 	<caption>{% include snippet-fun-consoleuser.md %}<kbd>azure site job</kbd></caption>
 	<tr>
 		<th class="w20">command</th>

@@ -1,4 +1,4 @@
-<table class="table table-striped cli cmd">
+<table class="table cli cmd">
 <caption>{% include snippet-fun-consoleuser.md %}<kbd>kudusync [options]</kbd></caption>
 <tr>
 	<th class="w20">command</th>
@@ -36,4 +36,3 @@
 	<td>&nbsp;</td>
 </tr>
 </table>
-	
