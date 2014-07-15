@@ -23,15 +23,8 @@ In order to do this there are a few steps involved:
 1. Download the <abbr title="Non Thread Safe">NTS</abbr> PHP runtime
 	* From  [PHP for Windows downloads](http://windows.php.net/downloads) page and upload to ```/site/wwwroot/bin/php``` via <abbr title="File Transfer Protocol">FTP</abbr>.
 	* Using [KuduExec](#kuduexec) or [KuduExec (Web)](#kuduexec-web)
-			<pre>
-			cd site\wwwroot
-			mkdir bin
-			cd bin
-			mkdir php
-			curl -o php.zip http://windows.php.net/downloads/releases/php-5.5.2-nts-Win32-VC11-x86.zip
-			unzip php.zip
-			rm php.zip
-			</pre>
+
+		{% gist SyntaxC4/0d7185b30acf477c2033 InstallPHP.sh %}
 
 2. Configure an Handler Mapping via the Microsoft Azure Management Portal; or
 	* Login to the Microsoft Azure Management Portal
@@ -39,21 +32,18 @@ In order to do this there are a few steps involved:
 	* Navigate to the **CONFIGURE** tab
 	* Scroll to the **Handler Mappings** section
 	* Flll the boxes as follows:
-		
+
 		{% include html-php-http-handler-mapping.md %}
 
 3. Configure a Handler Mapping via the command line:
 
 	**Cross Platform Command Line Tools**
 
-	<pre>azure site handler add '*.php' 'D:\home\site\wwwroot\bin\php\php-cgi.exe'</pre>
+	{% gist SyntaxC4/0d7185b30acf477c2033 addAzureWebsitePHPHandler.sh %}
 
 	**PowerShell Cmdlets**
 
-	<pre>
-	$phpMapping = (@{Extension="*.php";ScriptProcessor="d:\home\site\wwwroot\bin\php\php-cgi.exe"})
-	Set-AzureWebSite -HandlerMappings $phpMapping -Name &lt;website-name&gt;
-	</pre>
+	{% gist SyntaxC4/0d7185b30acf477c2033 New-AzureWebsitePHPHandler.ps1 %}
 
 ### Default PHP Extensions
 
