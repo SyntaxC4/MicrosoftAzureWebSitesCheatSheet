@@ -97,3 +97,11 @@ Some big wins come in small packages, enabling HTTP Compression in your Website 
 
 </pre>
 </noscript>
+
+##Enable HTTP Verbs
+
+When building out HTTP based APIs it is nearly impossible to enable functionality without being able to use certain HTTP Verbs such as PUT and DELETE.
+
+{% gist SyntaxC4/0d7185b30acf477c2033 web.netverbs.config %}
+
+{% gist SyntaxC4/0d7185b30acf477c2033 web.phpverbs.config %}
