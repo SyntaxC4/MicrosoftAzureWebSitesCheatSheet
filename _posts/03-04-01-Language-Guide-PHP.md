@@ -24,7 +24,7 @@ In order to do this there are a few steps involved:
 	* From  [PHP for Windows downloads](http://windows.php.net/downloads) page and upload to ```/site/wwwroot/bin/php``` via <abbr title="File Transfer Protocol">FTP</abbr>.
 	* Using [KuduExec](#kuduexec) or [KuduExec (Web)](#kuduexec-web)
 
-		{% gist SyntaxC4/0d7185b30acf477c2033 InstallPHP.sh %}
+{% gist SyntaxC4/0d7185b30acf477c2033 InstallPHP.sh %}
 
 2. Configure an Handler Mapping via the Microsoft Azure Management Portal; or
 	* Login to the Microsoft Azure Management Portal
@@ -39,11 +39,11 @@ In order to do this there are a few steps involved:
 
 	**Cross Platform Command Line Tools**
 
-	{% gist SyntaxC4/0d7185b30acf477c2033 addAzureWebsitePHPHandler.sh %}
+{% gist SyntaxC4/0d7185b30acf477c2033 addAzureWebsitePHPHandler.sh %}
 
 	**PowerShell Cmdlets**
 
-	{% gist SyntaxC4/0d7185b30acf477c2033 New-AzureWebsitePHPHandler.ps1 %}
+{% gist SyntaxC4/0d7185b30acf477c2033 New-AzureWebsitePHPHandler.ps1 %}
 
 ### Default PHP Extensions
 
