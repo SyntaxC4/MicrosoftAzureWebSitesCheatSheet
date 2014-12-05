@@ -19,9 +19,17 @@
 	<li class="list-group-item is-enabled">Node.js</li>
 	<li class="list-group-item is-enabled">PHP</li>
 	<li class="list-group-item is-enabled">Python</li>
-	<li class="list-group-item is-disabled">Remote Desktop Access</li>
-	<li class="list-group-item is-disabled">Reverse Proxy</li>
-	<li class="list-group-item is-disabled">Ruby</li>
+	<li class="list-group-item is-disabled">Remote Desktop Access 
+		<span class="label label-info">VM</span>
+		<span class="label label-info">CS</span>
+	</li>
+	<li class="list-group-item is-disabled">Reverse Proxy 
+		<span class="label label-info">VM</span>
+		<span class="label label-info">CS</span>
+	</li>
+	<li class="list-group-item is-disabled">Ruby 
+		<span class="label label-info">VM</span>
+	</li>
 	<li class="list-group-item is-enabled">Site Specific Configuration</li>
 	<li class="list-group-item is-enabled">SNI SSL</li>
 	<li class="list-group-item is-enabled">URL Rewrite</li>
