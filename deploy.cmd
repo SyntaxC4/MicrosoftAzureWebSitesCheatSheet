@@ -69,7 +69,7 @@ echo "Generate Static Site"
 IF NOT EXIST RUBY_INSTALLED (
     PATH="%path%";%RUBY_PATH%
     call %RUBY_DEVKIT_PATH%\devkitvars.bat
-    call gem install jekyll
+    call gem install jekyll --source http://rubygems.org :: This is a work around.
 	IF !ERRORLEVEL! NEQ 0 goto error
 	SET RUBY_INSTALLED="true"
 )
