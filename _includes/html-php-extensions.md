@@ -4,7 +4,7 @@
 	<li class="list-group-item is-enabled">php_curl.dll</li>
 	<li class="list-group-item is-disabled">php_enchant.dll</li>
 	<li class="list-group-item is-enabled">php_exif.dll</li>
-	<li class="list-group-item is-disabled">php_fileinfo.dll</li>
+	<li class="list-group-item is-enabled">php_fileinfo.dll</li>
 	<li class="list-group-item is-enabled">php_gd2.dll</li>
 	<li class="list-group-item is-enabled">php_gettext.dll</li>
 	<li class="list-group-item is-disabled">php_gmp.dll</li>
