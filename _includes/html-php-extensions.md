@@ -10,7 +10,7 @@
 	<li class="list-group-item is-disabled">php_gmp.dll</li>
 	<li class="list-group-item is-enabled">php_imap.dll</li>
 	<li class="list-group-item is-disabled">php_interbase.dll</li>
-	<li class="list-group-item is-disabled">php_intl.dll</li>
+	<li class="list-group-item is-enabled">php_intl.dll</li>
 	<li class="list-group-item is-disabled">php_ldap.dll</li>
 	<li class="list-group-item is-enabled">php_mbstring.dll</li>
 	<li class="list-group-item is-enabled">php_mysql.dll</li>
