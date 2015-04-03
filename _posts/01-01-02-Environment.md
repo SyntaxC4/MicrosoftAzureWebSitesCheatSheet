@@ -98,6 +98,22 @@ Some big wins come in small packages, enabling HTTP Compression in your Website 
 </pre>
 </noscript>
 
+##Force HTTPS
+
+{% gist SyntaxC4/0d7185b30acf477c2033 web.forcehttps.config %}
+
+<noscript>
+<pre>
+<rule name="Redirect to HTTPS" stopProcessing="true">
+  <match url="(.*)" />
+  <conditions>
+    <add input="{HTTPS}" pattern="^OFF$" />
+  </conditions>
+  <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" redirectType="Permanent" />
+</rule>
+</pre>
+</noscript>
+
 ##Enable HTTP Verbs
 
 When building out HTTP based APIs it is nearly impossible to enable functionality without being able to use certain HTTP Verbs such as PUT and DELETE.
