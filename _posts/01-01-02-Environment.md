@@ -128,6 +128,6 @@ When building out HTTP based APIs it is nearly impossible to enable functionalit
 
 ## Enable HTTP Strict Transport Security (HSTS)
 
-For more information on HSTS, visit and read this blog post on [How to Enable HTTP Strict Transport Security in IIS 7+](http://www.hanselman.com/blog/HowToEnableHTTPStrictTransportSecurityHSTSInIIS7.aspx) by [scott](http://hanselman.com)
+For more information on HSTS, visit and read this blog post on [How to Enable HTTP Strict Transport Security in IIS 7+](http://www.hanselman.com/blog/HowToEnableHTTPStrictTransportSecurityHSTSInIIS7.aspx) by [Scott](http://hanselman.com) Hanselman.
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.hsts.config %}
