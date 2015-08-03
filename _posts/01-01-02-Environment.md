@@ -50,7 +50,7 @@ Dynamic IP Restrictions enable you to block access to your website when based on
 
 ##Auto-Heal
 
-You know those bugs where the only way to fix them is to restart the server every so often? There's a `web.config` setting for that! Microsoft Azure Websites have the ability to auto-heal based on a number of different triggers, i've outlined some of them in the example below.
+You know those bugs where the only way to fix them is to restart the server every so often? There's a `web.config` setting for that! Microsoft Azure Websites have the ability to auto-heal based on a number of different triggers, i've outlined some of them in the example below. Note that this only works in Standard mode. It throws an error in Free or Basic mode.
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.autoheal.config %}
 
