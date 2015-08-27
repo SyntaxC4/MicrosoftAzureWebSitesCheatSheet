@@ -16,6 +16,8 @@ Some applications, however, may not require session affinity and it would be bet
 
 Based on your web application, you may want to restrict access to it. Access can be restricted by using the `<ipSecurity>` element and providing a list of IP address to allow.
 
+> If you would like to whitelist azure resources, the [Azure Datacenter IP Address Ranges](https://msdn.microsoft.com/en-us/library/azure/dn175718.aspx) are available online.
+
 {% include html-alert-ip-security-docs.md %}
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.ipsecurity.config %}
