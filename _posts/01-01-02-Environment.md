@@ -10,6 +10,9 @@ By default, Azure Websites comes preconfigured with Session affinity, which in m
 
 Some applications, however, may not require session affinity and it would be better to turn off the session affinity in Azure Websites. This can be achieved by adding the following to the `web.config` file.
 
+To ensure that the session affinity works during scaling activities, make sure to also add in an AppSetting with the following key value: **clientAffinityEnabled** = **false**
+
+
 {% gist SyntaxC4/0d7185b30acf477c2033 web.disable-session-affinity.config %}
 
 ##Filtering Traffic by IP
