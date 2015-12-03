@@ -119,6 +119,7 @@ Enable downstream caching of static html for performance and cheaper delivery vi
 </configuration>
 </pre>
 </noscript>
+
 ##Force HTTPS
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.forcehttps.config %}
