@@ -103,6 +103,22 @@ Some big wins come in small packages, enabling HTTP Compression in your Website 
 </pre>
 </noscript>
 
+##Cache Control
+Enable downstream caching of static html for performance and cheaper delivery via Content Delivery Network (CDN).  The snippet below enables 1 day, public caching of all HTML content.
+
+{% gist stephbu/673b6b3261552cbaf96b web.contentcaching.config %}
+
+<noscript>
+<pre>
+<configuration>
+ <system.webServer>
+   <staticContent>
+     <clientCache cacheControlCustom="public" cacheControlMode="UseMaxAge" cacheControlMaxAge="1.00:00:00" />
+   </staticContent>
+ </system.webServer>
+</configuration>
+</pre>
+</noscript>
 ##Force HTTPS
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.forcehttps.config %}
