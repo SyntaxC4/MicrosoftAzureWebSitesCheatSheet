@@ -59,6 +59,6 @@ Extensions can be enabled by adding **App Settings** to your Web Site with the f
 
 ### Enabling XDebug
 
-To enable the use of this `ini` file, create an `ini` folder within `d:\home\site\` and drop the following `xdebug.ini` file inside the folder. In the **App Settings** section of the portal, add a new App Setting `PHP_INI_SCAN_DIR` with the value of `d:\home\site\ini`.
+To enable the use of this `ini` file, create an `ini` folder within `d:\home\site\` and drop the following `xdebug.ini` file inside the folder. In the **App Settings** section of the portal, add a new App Setting `PHP_INI_SCAN_DIR` with the value of `d:\home\site\ini`. You must restart the App Service for these chances to take effect.
 
 {% gist SyntaxC4/0d7185b30acf477c2033 xdebug.ini %}
