@@ -144,7 +144,8 @@ When building out HTTP based APIs it is nearly impossible to enable functionalit
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.netverbs.config %}
 
-###PHP
+###PHP 
+- enable PUT requests using below web.config and make sure to change PHP Version number
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.phpverbs.config %}
 
