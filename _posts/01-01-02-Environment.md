@@ -2,9 +2,9 @@
 categories: [features]
 ---
 
-#Environment
+# Environment
 
-##Disable Server Affinity
+## Disable Server Affinity
 
 By default, Azure Websites comes preconfigured with Session affinity, which in many cases allows developers perform a very simple migration of their applications to cloud. This is because there is no need to worry about centralizing the session state of your application as a user will be redirected back to the same server on each subsequent request.
 
@@ -15,7 +15,7 @@ To ensure that the session affinity works during scaling activities, make sure t
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.disable-session-affinity.config %}
 
-##Filtering Traffic by IP
+## Filtering Traffic by IP
 
 Based on your web application, you may want to restrict access to it. Access can be restricted by using the `<ipSecurity>` element and providing a list of IP address to allow.
 
@@ -25,7 +25,7 @@ Based on your web application, you may want to restrict access to it. Access can
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.ipsecurity.config %}
 
-##Dynamic IP Restrictions
+## Dynamic IP Restrictions
 
 Dynamic IP Restrictions enable you to block access to your website when based on an interval of requests (i.e. Potential DDoS Attack). This can be achieved in a variety of ways as outlined in the example below.
 
@@ -53,7 +53,7 @@ Dynamic IP Restrictions enable you to block access to your website when based on
 </pre>
 </noscript>
 
-##Auto-Heal
+## Auto-Heal
 
 You know those bugs where the only way to fix them is to restart the server every so often? There's a `web.config` setting for that! Microsoft Azure Websites have the ability to auto-heal based on a number of different triggers, i've outlined some of them in the example below. Note that this only works in Standard mode. It throws an error in Free or Basic mode.
 
@@ -91,7 +91,7 @@ You know those bugs where the only way to fix them is to restart the server ever
 </pre>
 </noscript>
 
-##HTTP Compression
+## HTTP Compression
 
 Some big wins come in small packages, enabling HTTP Compression in your Website can help decrease your users mobile bill and wait time while loading your Web Application.
 
@@ -103,7 +103,7 @@ Some big wins come in small packages, enabling HTTP Compression in your Website 
 </pre>
 </noscript>
 
-##Cache Control
+## Cache Control
 Enable downstream caching of static html for performance and cheaper delivery via Content Delivery Network (CDN).  The snippet below enables 1 day, public caching of all HTML content.
 
 {% gist stephbu/673b6b3261552cbaf96b web.contentcaching.config %}
@@ -120,7 +120,7 @@ Enable downstream caching of static html for performance and cheaper delivery vi
 </pre>
 </noscript>
 
-##Force HTTPS
+## Force HTTPS
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.forcehttps.config %}
 
@@ -136,20 +136,21 @@ Enable downstream caching of static html for performance and cheaper delivery vi
 </pre>
 </noscript>
 
-##Enable HTTP Verbs
+## Enable HTTP Verbs
 
 When building out HTTP based APIs it is nearly impossible to enable functionality without being able to use certain HTTP Verbs such as PUT and DELETE.
 
-###.NET 
+### .NET 
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.netverbs.config %}
 
-###PHP 
-- enable PUT requests using below web.config and make sure to change PHP Version number
+### PHP
+
+Enable PUT requests using below web.config and make sure to change PHP Version number
 
 {% gist SyntaxC4/0d7185b30acf477c2033 web.phpverbs.config %}
 
-###Nodejs
+### Nodejs
 
 {% gist prashanthmadi/72574ff9b8513eb6785fc8c3c0b358f7 web.NodeJs.config %}
 
