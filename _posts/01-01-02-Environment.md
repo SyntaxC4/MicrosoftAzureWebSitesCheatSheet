@@ -103,8 +103,15 @@ Some big wins come in small packages, enabling HTTP Compression in your Website 
 </pre>
 </noscript>
 
+## Mime Map
+
+It's possible that you may need to map mime types to IIS if you are going to serve static files.
+
+{% gist SyntaxC4/0d7185b30acf477c2033 web.mimetype.config %}
+
 ## Cache Control
-Enable downstream caching of static html for performance and cheaper delivery via Content Delivery Network (CDN).  The snippet below enables 1 day, public caching of all HTML content.
+Enable downstream caching of 
+html for performance and cheaper delivery via Content Delivery Network (CDN).  The snippet below enables 1 day, public caching of all HTML content.
 
 {% gist stephbu/673b6b3261552cbaf96b web.contentcaching.config %}
 
