@@ -14,6 +14,15 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
     <title>{% if page.title %}{{ page.title }} - {% endif %}Microsoft Azure Web Site Cheat Sheet</title>
+	  
+    <style> html{display:none;} </style>
+    <script>
+    if(self == top) {
+        document.documentElement.style.display = 'block'; 
+    } else {
+	top.location = self.location; 
+    }
+    </script>
   </head>
 
 <body data-spy="scroll" data-target="#waws-navbar" data-offset="70">
