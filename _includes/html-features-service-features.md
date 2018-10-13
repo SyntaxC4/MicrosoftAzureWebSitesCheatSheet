@@ -13,7 +13,7 @@
 	<li class="list-group-item is-enabled">IP Restriction</li>	
 	<li class="list-group-item is-enabled">IP SSL</li>
 	<li class="list-group-item is-enabled">Java</li>
-	<li class="list-group-item is-disabled">Linux</li>
+	<li class="list-group-item is-enabled">Linux</li>
 	<li class="list-group-item is-enabled">MySQL</li>
 	<li class="list-group-item is-enabled">MS SQL Server</li>
 	<li class="list-group-item is-enabled">Node.js</li>
@@ -35,4 +35,5 @@
 	<li class="list-group-item is-enabled">URL Rewrite</li>
 	<li class="list-group-item is-enabled">Web Sockets</li>
 	<li class="list-group-item is-enabled">Windows/IIS</li>
+	<li class="list-group-item is-enabled">Containers/IIS</li>
 </ul>
